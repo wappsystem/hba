@@ -1,0 +1,167 @@
+<div id=D__ID>
+    <div class="container mt-95 mb-3">
+      <div class="row" >
+        <!-- form container start -->
+        <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+          <div class="row">
+            <div class="col-12">
+              <!-- form start -->
+              <form id="F__ID">
+                 <h3 id=title__ID></h3>
+                 <div class="row px-4">
+                     <div class='col'>
+                         <label ><span class=""></span>
+                        </label>
+                     </div>
+                 </div>
+                 <hr>
+                 <!-- participant part for all tsak forms -------------------->
+                 <div id="participant_div__ID">
+                     <div class="row px-4">
+                         <div class="col-sm-12 col-lg-9 ">
+                             <span class=label__ID>Screening Number</span><br>
+                             <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                         </div>
+                         <div class="col-sm-12 col-lg-3">
+                             <span class=label__ID>Participant ID</span><br>
+                             <input type=text name="Participant_uid" class=form-control readonly />
+                         </div>
+                     </div>
+                     <hr>
+                 </div>
+                 <!-- form group -->
+                 <div class="row px-4">
+                    <div class='col'>
+                        <span>Report File (pdf)</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_File_Name__ID></u>
+                            <br>
+                            <input type="file" name=File_Name style="margin-top:6px" /> &nbsp&nbsp&nbsp
+                            <button type="button" id=x_File_Name__ID>Remove</button>
+                        </div>
+                    </div>
+                </div>
+                 <hr>
+                 <div class="row px-4">
+                    <div class='col'>
+                        <span>Data File (asc)</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_File_Name2__ID></u>
+                            <br>
+                            <input type="file" name=File_Name2 style="margin-top:6px" /> &nbsp&nbsp&nbsp
+                            <button type="button" id=x_File_Name2__ID>Remove</button>
+                        </div>
+                    </div>
+                </div>
+                 <hr>
+                 <div class='row px-4'>
+                     <div class="col-sm-12 col-lg-6">
+                         <label class=''><span class='' >Serial Number</span>
+                             <input class="form-control" type="text" name="Serial_No" />
+                         </label>
+                     </div>
+                 </div>
+                 <hr>
+                 <div class='row px-4'>
+                    <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Recording Date</span>
+                            <input class="form-control" type="text" name="Recording_Date" />
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Recording Time</span>
+                            <input class="form-control" type="text" name="Recording_Time" />
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Artifacts Duration</span>
+                            <input class="form-control" type="text" name="Artifacts_Duration" />
+                        </label>
+                    </div>
+                </div>
+                <hr>
+                <div class='row px-4'>
+                     <div class="col-sm-12 col-lg-4">
+                         <label class=''><span class='' >Desaturation Event:</span>
+                             <input class="form-control" type="text" name="Desat_Event" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Time in Desat Events (min)</span>
+                            <input class="form-control" type="text" name="Time_Desat_Event" />
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                         <label class=''><span class='' >ODI (Desat Event per Hour)</span>
+                             <input class="form-control" type="text" name="ODI" />
+                         </label>
+                     </div>
+                </div>
+                 <hr>
+                 <div class='row px-4'>
+                     <div class="col-sm-12 col-lg-4">
+                         <label class=''><span class='' >Pulse Event</span>
+                             <input class="form-control" type="text" name="Pulse_Event" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-4">
+                         <label class=''><span class='' >Time in Pulse Event (min)</span>
+                             <input class="form-control" type="text" name="Time_Pulse_Event" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Pulse Event per Hour</span>
+                            <input class="form-control" type="text" name="Pulse_Index" />
+                        </label>
+                    </div>
+                </div>
+                 <hr>
+                 <div class='row px-4'>
+                    <div class="col-sm-12 col-lg-6">
+                        <label class=''><span class='' >Time (min) where oxygen saturation is below 88</span>
+                             <input class="form-control" type="text" name="Desat_Below_88" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-3">
+                        <label class=''><span class='' >Minimum SpO2</span>
+                             <input class="form-control" type="text" name="SaO2_Min" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-3">
+                        <label class=''><span class='' >Maximum SpO2</span>
+                             <input class="form-control" type="text" name="SaO2_Max" />
+                         </label>
+                     </div>
+                 </div>
+                 <hr>
+                 <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+              </form>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        //---------------------------------------------
+        function F__ID(){
+            //-------------------------------------
+			VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:__CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            var load5=m.load;
+            m.load=function(){
+                load5();
+                m.set_file_link("File_Name");
+                m.set_file_link("File_Name2");
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width:800px;
+        }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

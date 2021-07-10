@@ -1,0 +1,49 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+    	<div id=header__ID>
+    		Randomisation
+    	</div>
+    	<form id=F__ID>
+    		<div class="container">
+    			<div class="row row__ID">
+                    <div class="col">
+                        <span>Randomisation number</span>
+                        <input type=number class="form-control" name="Randomisation_number">
+                    </div>
+                </div>
+    			<div class="row row__ID">
+                    <div class="col">
+                        <span>First arm</span>
+                        <input type=text class="form-control" name="First_arm">
+                    </div>
+                </div>
+                <br>
+    			<div class="row row__ID">
+                    <div class="col">
+                        <span>secondary arm</span>
+                        <input type=text class="form-control" name="Second_arm">
+                    </div>
+                </div>
+                <br>
+    			<div class="row">
+    				<div class=col>
+    					<button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+    				</div>
+    			</div>
+    		</div>
+    	</form>
+    </section>
+    <script>
+    	function F__ID(){
+    		//-------------------------------------
+            VmInclude:__COMPONENT__/f/form.01.js
+    		//-------------------------------------
+    	}
+    </script>
+    <style>
+        #form_container__ID{
+            max-width:700px;
+        }
+		VmInclude:__COMPONENT__/f/form.01.css
+    </style>
+</div>

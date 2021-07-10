@@ -1,0 +1,26 @@
+<section>
+  VmInclude:__CURRENT_PATH__/grid.v1h.html
+</section>
+<script>
+  function F__ID(){
+      //-------------------------------------
+      VmInclude:__COMPONENT__/g/grid.01.js
+      VmInclude:__CURRENT_PATH__/shared-data.js
+      //-------------------------------------
+      $('#title__ID').text('Lifestyle')
+      //-------------------------------------
+      var fields="instant_coffee,instant_coffee_freq,instant_coffee_caffeine";
+      fields+=",small_coffee,small_coffee_freq,small_coffee_caffeine";
+      fields+=",medium_coffee,medium_coffee_freq,medium_coffee_caffeine";
+      fields+=",large_coffee,large_coffee_freq,large_coffee_caffeine";
+      fields+=",ice_coffee,ice_coffee_freq,ice_coffee_caffeine";
+      fields+=",tea,tea_freq,tea_caffeine";
+      fields+=",cola,cola_freq,cola_caffeine";
+      fields+=",energy,energy_freq,energy_caffeine,total_mean_caffeine"
+      m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+      //-------------------------------------
+  }
+</script>
+<style>
+  VmInclude:__COMPONENT__/g/grid.01.css
+</style>

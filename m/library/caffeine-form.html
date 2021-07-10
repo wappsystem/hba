@@ -1,0 +1,427 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95 mb-3">
+    <div class="row">
+      <!-- form container start -->
+      <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+        <div class="row">
+          <div class="col-12">
+            <!-- form start -->
+            <form id="F__ID">
+              <h3 id=title__ID></h3>
+              <!-- participant part for all tsak forms -------------------->
+              <div id="participant_div__ID">
+                <div class="form-group">
+                  <fieldset class="subquestions">
+                    <label><span class="">Screening Number</span>
+                      <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </label><br>
+                    <label><span class="">Participant ID</span>
+                      <input type=text name="Participant_uid" class=form-control readonly />
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <h7>Caffeine Intake</h7>
+              <div class="form-group">
+                <h4>In the past 2 week, please indicate how much caffeine you have consumed.</h4>
+                <table style='width:100%'>
+                  <tr>
+                    <th>Food/Fluid</th>
+                    <th>Serve</th>
+                    <th>Count</th>
+                    <th>Fequency</th>
+                  </tr>
+                  <tr>
+                    <td>Instant Coffee (Caffinated)</td>
+                    <td>1 tsp coffee</td>
+                    <td><input class="form-control" type="number" min=0 max=20 name="instant_coffee" id=instant_coffee__ID required ></td>
+                    <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="instant_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="instant_coffee_freq" value="1">
+                        <span class="checkmark"></span> Daily
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="instant_coffee_freq" value="0.143">
+                        <span class="checkmark"></span> Weekly
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="instant_coffee_freq" value="0.0714">
+                        <span class="checkmark"></span> Fortnightly
+                      </label><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Barista-Style Coffee (e.g. latte, long black, espresso)
+                    </td>
+                    <td>
+                      1 small cup (1 x 30 mL coffee shot)
+                      </td>
+                    <td><input class="form-control" type="number" min=0 max=20 name="small_coffee" id=small_coffee__ID required ></td>
+                    <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="small_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="small_coffee_freq" value="1">
+                        <span class="checkmark"></span> Daily
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="small_coffee_freq" value="0.143">
+                        <span class="checkmark"></span> Weekly
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="small_coffee_freq" value="0.0714">
+                        <span class="checkmark"></span> Fortnightly
+                      </label><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Barista-Style Coffee (e.g. latte, long black, espresso)
+                    </td>
+                    <td>
+                      1 medium cup (2 x 30 mL coffee shot)
+                      </td>
+                    <td><input class="form-control" type="number" min=0 max=20 name="medium_coffee" id=medium_coffee__ID required ></td>
+                    <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="medium_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="medium_coffee_freq" value="1">
+                        <span class="checkmark"></span> Daily
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="medium_coffee_freq" value="0.143">
+                        <span class="checkmark"></span> Weekly
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="medium_coffee_freq" value="0.0714">
+                        <span class="checkmark"></span> Fortnightly
+                      </label><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Barista-Style Coffee (e.g. latte, long black, espresso)
+                    </td>
+                    <td>                      
+                      1 large cup (3 x 30 mL coffee shot)
+                    </td>
+                    <td><input class="form-control" type="number" min=0 max=20 name="large_coffee" id=large_coffee__ID required ></td>
+                    <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="large_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="large_coffee_freq" value="1">
+                        <span class="checkmark"></span> Daily
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="large_coffee_freq" value="0.143">
+                        <span class="checkmark"></span> Weekly
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="large_coffee_freq" value="0.0714">
+                        <span class="checkmark"></span> Fortnightly
+                      </label><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      Iced Coffee (e.g. Breaka, Big M)                      
+                    </td>
+                    <td>                      
+                      600 mL
+                    </td>
+                    <td><input class="form-control" type="number" min=0 max=20 name="ice_coffee" id=ice_coffee__ID required ></td>
+                    <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="ice_coffee_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="ice_coffee_freq" value="1">
+                        <span class="checkmark"></span> Daily
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="ice_coffee_freq" value="0.143">
+                        <span class="checkmark"></span> Weekly
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="ice_coffee_freq" value="0.0714">
+                        <span class="checkmark"></span> Fortnightly
+                      </label><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Black Tea
+                    </td>
+                    <td>1 cup                      
+                    </td>
+                    <td><input class="form-control" type="number" min=0 max=20 name="tea" id=tea__ID required ></td>
+                    <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="tea_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="tea_freq" value="1">
+                        <span class="checkmark"></span> Daily
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="tea_freq" value="0.143">
+                        <span class="checkmark"></span> Weekly
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="tea_freq" value="0.0714">
+                        <span class="checkmark"></span> Fortnightly
+                      </label><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Cola Beverages (e.g. Coca Cola, Pepsi)
+                    </td>
+                    <td>                      
+                      375 mL
+                    </td>
+                    <td><input class="form-control" type="number" min=0 max=20 name="cola" id=cola__ID required ></td>
+                    <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="cola_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="cola_freq" value="1">
+                        <span class="checkmark"></span> Daily
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="cola_freq" value="0.143">
+                        <span class="checkmark"></span> Weekly
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="cola_freq" value="0.0714">
+                        <span class="checkmark"></span> Fortnightly
+                      </label><br>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Energy Drinks (e.g. Red Bull)
+                    </td>
+                    <td>                      
+                      250 mL
+                    </td>
+                    <td><input class="form-control" type="number" min=0 max=20 name="energy" id=energy__ID required ></td>
+                    <td>
+                      <label class="radiobuttons">
+                        <input type="radio" name="energy_freq" value="0" required >
+                        <span class="checkmark"></span> None
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="energy_freq" value="1">
+                        <span class="checkmark"></span> Daily
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="energy_freq" value="0.143">
+                        <span class="checkmark"></span> Weekly
+                      </label><br>
+                      <label class="radiobuttons">
+                        <input type="radio" name="energy_freq" value="0.0714">
+                        <span class="checkmark"></span> Fortnightly
+                      </label><br>
+                    </td>
+                  </tr>
+                </table>
+          </div>
+          <div class="form-group">
+            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function F__ID() {
+    //-------------------------------------
+    VmInclude: __COMPONENT__/f/form.01.js
+    VmInclude: __CURRENT_PATH__/shared-form.js
+    var load2=m.load;
+        m.load=function(){
+          load2();
+          if($("input[name='instant_coffee_freq']:checked").val()!='0'){
+            $("input[name='instant_coffee]").prop('required', true);
+          }
+          else {
+            $("input[name='instant_coffee]").prop('required', false);
+          }
+          if($("input[name='small_coffee_freq']:checked").val()!='0'){
+            $("input[name='small_coffee]").prop('required', true);
+          }
+          else {
+            $("input[name='small_coffee]").prop('required', false);
+          }
+          if($("input[name='medium_coffee_freq']:checked").val()!='0'){
+            $("input[name='medium_coffee]").prop('required', true);
+          }
+          else {
+            $("input[name='medium_coffee]").prop('required', false);
+          }
+          if($("input[name='large_coffee_freq']:checked").val()!='0'){
+            $("input[name='large_coffee]").prop('required', true);
+          }
+          else {
+            $("input[name='large_coffee]").prop('required', false);
+          }
+          if($("input[name='ice_coffee_freq']:checked").val()!='0'){
+            $("input[name='ice_coffee]").prop('required', true);
+          }
+          else {
+            $("input[name='ice_coffee]").prop('required', false);
+          }
+          if($("input[name='tea_freq']:checked").val()!='0'){
+            $("input[name='tea]").prop('required', true);
+          }
+          else {
+            $("input[name='tea]").prop('required', false);
+          }
+          if($("input[name='cola_freq']:checked").val()!='0'){
+            $("input[name='cola]").prop('required', true);
+          }
+          else {
+            $("input[name='cola]").prop('required', false);
+          }
+          if($("input[name='energy_freq']:checked").val()!='0'){
+            $("input[name='energy]").prop('required', true);
+          }
+          else {
+            $("input[name='energy]").prop('required', false);
+          }
+      }
+      $("input[name='instant_coffee_freq']").on('click',function(){
+        if($("input[name='instant_coffee_freq']:checked").val()!='0'){
+            $("input[name='instant_coffee']").prop('required', true);
+          }
+          else {
+            $("input[name='instant_coffee']").prop('required', false);
+          }
+      })
+      $("input[name='small_coffee_freq']").on('click',function(){
+          if($("input[name='small_coffee_freq']:checked").val()!='0'){
+            $("input[name='small_coffee']").prop('required', true);
+          }
+          else {
+            $("input[name='small_coffee']").prop('required', false);
+          }
+        })
+        $("input[name='medium_coffee_freq']").on('click',function(){
+          if($("input[name='medium_coffee_freq']:checked").val()!='0'){
+            $("input[name='medium_coffee']").prop('required', true);
+          }
+          else {
+            $("input[name='medium_coffee']").prop('required', false);
+          }
+        })
+        $("input[name='large_coffee_freq']").on('click',function(){
+          if($("input[name='large_coffee_freq']:checked").val()!='0'){
+            $("input[name='large_coffee']").prop('required', true);
+          }
+          else {
+            $("input[name='large_coffee']").prop('required', false);
+          }
+        })
+        $("input[name='ice_coffee_freq']").on('click',function(){
+          if($("input[name='ice_coffee_freq']:checked").val()!='0'){
+            $("input[name='ice_coffee']").prop('required', true);
+          }
+          else {
+            $("input[name='ice_coffee']").prop('required', false);
+          }
+        })
+        $("input[name='tea_freq']").on('click',function(){
+          if($("input[name='tea_freq']:checked").val()!='0'){
+            $("input[name='tea']").prop('required', true);
+          }
+          else {
+            $("input[name='tea']").prop('required', false);
+          }
+        })
+        $("input[name='cola_freq']").on('click',function(){
+          if($("input[name='cola_freq']:checked").val()!='0'){
+            $("input[name='cola']").prop('required', true);
+          }
+          else {
+            $("input[name='cola']").prop('required', false);
+          }
+        })
+        $("input[name='energy_freq']").on('click',function(){
+          if($("input[name='energy_freq']:checked").val()!='0'){
+            $("input[name='energy']").prop('required', true);
+          }
+          else {
+            $("input[name='energy']").prop('required', false);
+          }
+        })
+         //-------------------------------------
+         var before_submit=m.before_submit;
+            m.before_submit=function(data,index){
+              var caffeine=0
+              if($("input[name='instant_coffee_freq']:checked").val()!=0) data.instant_coffee_caffeine=((parseFloat($("input[name='instant_coffee']").val())*parseFloat($("input[name='instant_coffee_freq']:checked").val()))*98).toFixed(0);
+              else data.instant_coffee_caffeine='0';
+              if($("input[name='small_coffee_freq']:checked").val()!=0) data.small_coffee_caffeine=((parseFloat($("input[name='small_coffee']").val())*parseFloat($("input[name='small_coffee_freq']:checked").val()))*129).toFixed(0);
+              else data.small_coffee_caffeine='0';
+              if($("input[name='medium_coffee_freq']:checked").val()!=0) data.medium_coffee_caffeine=((parseFloat($("input[name='medium_coffee']").val())*parseFloat($("input[name='medium_coffee_freq']:checked").val()))*258).toFixed(0);
+              else data.medium_coffee_caffeine='0';
+              if($("input[name='large_coffee_freq']:checked").val()!=0) data.large_coffee_caffeine=((parseFloat($("input[name='large_coffee']").val())*parseFloat($("input[name='large_coffee_freq']:checked").val()))*387).toFixed(0);
+              else data.large_coffee_caffeine='0';
+              if($("input[name='ice_coffee_freq']:checked").val()!=0) data.ice_coffee_caffeine=((parseFloat($("input[name='ice_coffee']").val())*parseFloat($("input[name='ice_coffee_freq']:checked").val()))*110).toFixed(0);
+              else data.ice_coffee_caffeine='0';
+              if($("input[name='tea_freq']:checked").val()!=0) data.tea_caffeine=((parseFloat($("input[name='tea']").val())*parseFloat($("input[name='tea_freq']:checked").val()))*32).toFixed(0);
+              else data.tea_caffeine='0';
+              if($("input[name='cola_freq']:checked").val()!=0) data.cola_caffeine=((parseFloat($("input[name='cola']").val())*parseFloat($("input[name='cola_freq']:checked").val()))*43).toFixed(0);
+              else data.cola_caffeine='0';
+              if($("input[name='energy_freq']:checked").val()!=0) data.energy_caffeine=((parseFloat($("input[name='energy']").val())*parseFloat($("input[name='energy_freq']:checked").val()))*82).toFixed(0);
+              else data.energy_caffeine='0';
+              //console.log("AAAA: "+ $("input[name='instant_coffee_freq']:checked").val())
+              data.total_mean_caffeine=(parseFloat(data.instant_coffee_caffeine)+parseFloat(data.small_coffee_caffeine)+parseFloat(data.medium_coffee_caffeine)+parseFloat(data.large_coffee_caffeine)+parseFloat(data.ice_coffee_caffeine)+parseFloat(data.tea_caffeine)+parseFloat(data.cola_caffeine)+parseFloat(data.energy_caffeine)).toFixed(0)
+              return before_submit(data,index);
+          }
+          //-------------------------------------
+
+  }
+</script>
+<style>
+  #D__ID .mt-95 {
+    max-width: 800px;
+    
+  }
+  #D__ID  table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: 'Nunito Sans';
+    font-weight: 600;
+    font-size: 14px;
+    color: #444645;
+}
+
+#D__ID  td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#D__ID  tr:nth-child(even) {
+  background-color: #dddddd;
+}
+ 
+
+  VmInclude:__CURRENT_PATH__/wappsystem-form.css
+</style>
+</div>

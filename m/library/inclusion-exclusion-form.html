@@ -1,0 +1,150 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95 mb-3">
+    <div class="row">
+      <!-- form container start -->
+      <div class="col-12 col-lg-11 col-md-11 col-sm-12 mx-auto formbox">
+        <div class="row">
+          <div class="col-12">
+            <!-- form start -->
+            <form id="F__ID">
+              <h3>Inclusion/Exclusion Criteria</h3>
+              <!-- participant part for all tsak forms -------------------->
+              <div id="participant_div__ID">
+                <div class="form-group">
+                  <fieldset class="subquestions">
+                    <label><span class="">Screening Number</span>
+                      <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </label><br>
+                    <label><span class="">Participant ID</span>
+                      <input type=text name="Participant_uid" class=form-control readonly />
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <!-- form group -->
+              <h3>i. Inclusion Criteria</h3>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>Able to give informed written consent</h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="consent" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="consent" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>Older than 50 years without cognitive impairment (based on the Mini-Mental State Examination (MMSE > 24)</h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="age" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="age" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>Subjective reported poor sleep quality (Pittsburgh Sleep Quality Index global score or PSQI >5)</h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="psqi" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="pqsi" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>Multivariable apnoea prediction index (MAPI)≤0.5 indicating a low probability of being diagnosed with obstructive sleep apnoea (OSA) and an Apnoea-Hypopnea Index (AHI) of  &lt;15/hr indicating no or mild obstructive sleep apnoea.</h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="mapi" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="mapi" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <!-- form group -->
+              <h3>ii. Exclusion Criteria</h3>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>Pregnancy or lactation</h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="pregnancy" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="pregnancy" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>Circadian rhythm disorders</span></h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="crd" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="crd" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>People highly dependent on medical care)</span></h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="dependent" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="dependent" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>Major psychiatric illnesses</h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="psychiatric_illnesses" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="psychiatric_illnesses" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>Sleep disorders including obstructive sleep apnoea, restless legs syndrome</h4>
+                  <label class="radiobuttons">
+                    <input type="radio" name="sleep_disorder" value="Yes" required>
+                    <span class="checkmark"></span> Yes</label>
+                  <label class="radiobuttons">
+                    <input type="radio" name="sleep_disorder" value="No">
+                    <span class="checkmark"></span> No</label>
+                </fieldset>
+              </div>
+              <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function F__ID() {
+      //-------------------------------------
+      VmInclude: '__COMPONENT__/f/form.01.js'
+      VmInclude: __CURRENT_PATH__/shared-form.js
+      //-------------------------------------
+    }
+  </script>
+  <style>
+    #D__ID .mt-95 {
+      max-width: 800px;
+    }
+
+    VmInclude:__CURRENT_PATH__/wappsystem-form.css
+  </style>
+</div>

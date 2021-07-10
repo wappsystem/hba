@@ -1,0 +1,24 @@
+<section>
+  VmInclude:__CURRENT_PATH__/grid.v1h.html
+</section>
+<script>
+  function F__ID(){
+      //-------------------------------------
+      VmInclude:__COMPONENT__/g/grid.01.js
+      VmInclude:__CURRENT_PATH__/shared-data.js
+      //-------------------------------------
+      //$('#title__ID').text('Medical History')
+      //-------------------------------------
+      var fields="pregnant,health,health_specify,prescription,OTC,complementary,supplements,sedatives";
+      fields+=",opioids,stimulants,miscellaneous,insomnia_none,insomnia_meditation,insomnia_freq_meditation,insomnia_sleep_hygene,insomnia_freq_sleep_hygene";
+      fields+=",insomnia_otc,insomnia_freq_otc,insomnia_precritption,insomnia_freq_precritption,insomnia_recreational,insomnia_freq_recreational,insomnia_other,insomnia_other_specify,insomnia_freq_other";
+      fields+=",used_cannabis,used_cannabis_specify,recreational_drug,recreational_drug_specify";
+      fields+=",osa,osa_specify";
+      fields+=",shift_work,shift_work_specify,smoking,smoking_specify";
+      m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+      //-------------------------------------
+  }
+</script>
+<style>
+  VmInclude:__COMPONENT__/g/grid.01.css
+</style>

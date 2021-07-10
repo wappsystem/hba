@@ -1,0 +1,294 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95 mb-3">
+    <div class="row">
+      <!-- form container start -->
+      <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+        <div class="row">
+          <div class="col-12">
+            <!-- form start -->
+            <form id="F__ID">
+              <h3 id=title__ID></h3>
+              <!-- participant part for all tsak forms -------------------->
+              <div id="participant_div__ID">
+                <div class="form-group">
+                  <fieldset class="subquestions">
+                    <label><span class="">Screening Number</span>
+                      <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </label><br>
+                    <label><span class="">Participant ID</span>
+                      <input type=text name="Participant_uid" class=form-control readonly />
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>1. In the past 2 weeks, have you suffered with any of the following symptoms related to a cold or
+                  flu? Choose all that apply</h4>
+                <div class="questiongroup">
+                  <fieldset>
+                    <label class="checkboxes">
+                      <input type="checkbox" name="Headache">
+                      <span class="check_checkmark"></span> Headache
+                    </label><br>
+                    <label class="checkboxes">
+                      <input type="checkbox" name="Sore_throat">
+                      <span class="check_checkmark"></span> Sore throat
+                    </label><br>
+                    <label class="checkboxes">
+                      <input type="checkbox" name="Blocked_nose">
+                      <span class="check_checkmark"></span> Blocked nose
+                    </label><br>
+                    <label class="checkboxes">
+                      <input type="checkbox" name="Fever_chills">
+                      <span class="check_checkmark"></span> Fever/chills
+                    </label><br>
+                    <label class="checkboxes">
+                      <input type="checkbox" name="Body_aches">
+                      <span class="check_checkmark"></span> Body aches</label><br>
+                    <label class="checkboxes">
+                      <input type="checkbox" name="Lethargy">
+                      <span class="check_checkmark"></span> Lethargy</label><br>
+                    <label class="checkboxes">
+                      <input type="checkbox" name="None_of_these">
+                      <span class="check_checkmark"></span> None of these</label><br>
+                  </fieldset>
+                </div>
+              </div>
+              <div id=q2__ID>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm control-group">
+                      <h4>2. In the past 2 weeks, how many days did you spend in bed recovering from symptoms of a cold or flu?</h4>
+                    </div>
+                  </div>
+                  <div class="questiongroup">
+                    <fieldset class="pl-4">
+                      <label><span class=""></span>
+                        <select name="spend_in_bed" class=form-control>
+                          <option></option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>2 weeks</option>
+                        </select>
+                      </label><br>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm control-group">
+                      <h4>3. If you are working, how many sicks days did you have to take because of symptoms of cold or flu?</h4>
+                    </div>
+                  </div>
+                  <div class="questiongroup">
+                    <fieldset class="pl-4">
+                      <label><span class=""></span>
+                        <select name="sicks_days" class=form-control>
+                          <option></option>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>2 weeks</option>
+                        </select>
+                      </label><br>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //---------------------------------------------
+    function F__ID() {
+      //-------------------------------------
+      VmInclude: __COMPONENT__/f/form.01.js
+      VmInclude: __CURRENT_PATH__/shared-form.js
+      //-------------------------------------
+      var load2 = m.load;
+      m.load = function () {
+        if ($('#D__ID [name="Headache"]:checked').val() == 'on' 
+              || $('#D__ID [name="Sore_throat"]:checked').val() == 'on' 
+              || $('#D__ID [name="Blocked_nose"]:checked').val() == 'on'
+              || $('#D__ID [name="Fever_chills"]:checked').val() == 'on'
+              || $('#D__ID [name="Body_aches"]:checked').val() == 'on'
+              || $('#D__ID [name="Lethargy"]:checked').val() == 'on') {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', true);
+            $('#D__ID select[name="sicks_days"]').prop('required', true);
+            $('#D__ID input[name="None_of_these"]').prop('checked', false);
+            $('#q2__ID').show();
+        }
+        else {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', false);
+            $('#D__ID select[name="sicks_days"]').prop('required', false);
+            $('#q2__ID').hide();
+        }
+      }
+      //-------------------------------------
+      $('#D__ID input[name="Headache"]').on('click', function () {
+        if ($('#D__ID [name="Headache"]:checked').val() == 'on' 
+              || $('#D__ID [name="Sore_throat"]:checked').val() == 'on' 
+              || $('#D__ID [name="Blocked_nose"]:checked').val() == 'on'
+              || $('#D__ID [name="Fever_chills"]:checked').val() == 'on'
+              || $('#D__ID [name="Body_aches"]:checked').val() == 'on'
+              || $('#D__ID [name="Lethargy"]:checked').val() == 'on') {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', true);
+            $('#D__ID select[name="sicks_days"]').prop('required', true);
+            $('#D__ID input[name="None_of_these"]').prop('checked', false);
+            $('#q2__ID').show();
+        }
+        else {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', false);
+            $('#D__ID select[name="sicks_days"]').prop('required', false);
+            $('#q2__ID').hide();
+        }
+      })
+      //-------------------------------------
+      $('#D__ID input[name="Sore_throat"]').on('click', function () {
+        if ($('#D__ID [name="Headache"]:checked').val() == 'on' 
+              || $('#D__ID [name="Sore_throat"]:checked').val() == 'on' 
+              || $('#D__ID [name="Blocked_nose"]:checked').val() == 'on'
+              || $('#D__ID [name="Fever_chills"]:checked').val() == 'on'
+              || $('#D__ID [name="Body_aches"]:checked').val() == 'on'
+              || $('#D__ID [name="Lethargy"]:checked').val() == 'on') {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', true);
+            $('#D__ID select[name="sicks_days"]').prop('required', true);
+            $('#D__ID input[name="None_of_these"]').prop('checked', false);
+            $('#q2__ID').show();
+        }
+        else {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', false);
+            $('#D__ID select[name="sicks_days"]').prop('required', false);
+            $('#q2__ID').hide();
+        }
+      })
+      //-------------------------------------
+      $('#D__ID input[name="Blocked_nose"]').on('click', function () {
+        if ($('#D__ID [name="Headache"]:checked').val() == 'on' 
+              || $('#D__ID [name="Sore_throat"]:checked').val() == 'on' 
+              || $('#D__ID [name="Blocked_nose"]:checked').val() == 'on'
+              || $('#D__ID [name="Fever_chills"]:checked').val() == 'on'
+              || $('#D__ID [name="Body_aches"]:checked').val() == 'on'
+              || $('#D__ID [name="Lethargy"]:checked').val() == 'on') {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', true);
+            $('#D__ID select[name="sicks_days"]').prop('required', true);
+            $('#D__ID input[name="None_of_these"]').prop('checked', false);
+            $('#q2__ID').show();
+        }
+        else {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', false);
+            $('#D__ID select[name="sicks_days"]').prop('required', false);
+            $('#q2__ID').hide();
+        }
+      })
+      //-------------------------------------
+      $('#D__ID input[name="Fever_chills"]').on('click', function () {
+        if ($('#D__ID [name="Headache"]:checked').val() == 'on' 
+              || $('#D__ID [name="Sore_throat"]:checked').val() == 'on' 
+              || $('#D__ID [name="Blocked_nose"]:checked').val() == 'on'
+              || $('#D__ID [name="Fever_chills"]:checked').val() == 'on'
+              || $('#D__ID [name="Body_aches"]:checked').val() == 'on'
+              || $('#D__ID [name="Lethargy"]:checked').val() == 'on') {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', true);
+            $('#D__ID select[name="sicks_days"]').prop('required', true);
+            $('#D__ID input[name="None_of_these"]').prop('checked', false);
+            $('#q2__ID').show();
+        }
+        else {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', false);
+            $('#D__ID select[name="sicks_days"]').prop('required', false);
+            $('#q2__ID').hide();
+        }
+      })
+      //-------------------------------------
+      $('#D__ID input[name="Body_aches"]').on('click', function () {
+        if ($('#D__ID [name="Headache"]:checked').val() == 'on' 
+              || $('#D__ID [name="Sore_throat"]:checked').val() == 'on' 
+              || $('#D__ID [name="Blocked_nose"]:checked').val() == 'on'
+              || $('#D__ID [name="Fever_chills"]:checked').val() == 'on'
+              || $('#D__ID [name="Body_aches"]:checked').val() == 'on'
+              || $('#D__ID [name="Lethargy"]:checked').val() == 'on') {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', true);
+            $('#D__ID select[name="sicks_days"]').prop('required', true);
+            $('#D__ID input[name="None_of_these"]').prop('checked', false);
+            $('#q2__ID').show();
+        }
+        else {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', false);
+            $('#D__ID select[name="sicks_days"]').prop('required', false);
+            $('#q2__ID').hide();
+        }
+      })
+      //-------------------------------------
+      $('#D__ID input[name="Lethargy"]').on('click', function () {
+        if ($('#D__ID [name="Headache"]:checked').val() == 'on' 
+              || $('#D__ID [name="Sore_throat"]:checked').val() == 'on' 
+              || $('#D__ID [name="Blocked_nose"]:checked').val() == 'on'
+              || $('#D__ID [name="Fever_chills"]:checked').val() == 'on'
+              || $('#D__ID [name="Body_aches"]:checked').val() == 'on'
+              || $('#D__ID [name="Lethargy"]:checked').val() == 'on') {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', true);
+            $('#D__ID select[name="sicks_days"]').prop('required', true);
+            $('#D__ID input[name="None_of_these"]').prop('checked', false);
+            $('#q2__ID').show();
+        }
+        else {
+            $('#D__ID select[name="spend_in_bed"]').prop('required', false);
+            $('#D__ID select[name="sicks_days"]').prop('required', false);
+            $('#q2__ID').hide();
+        }
+      })
+      //-------------------------------------
+      $('#D__ID input[name="None_of_these"]').on('click', function () {
+            if ($('#D__ID input[name="None_of_these"]:checked').val() == 'on') {
+              $('#D__ID select[name="spend_in_bed"]').prop('required', false);
+              $('#D__ID select[name="sicks_days"]').prop('required', false);
+              $('#D__ID input[name="Headache"]').prop('checked', false);
+              $('#D__ID input[name="Sore_throat"]').prop('checked', false);
+              $('#D__ID input[name="Blocked_nose"]').prop('checked', false);
+              $('#D__ID input[name="Fever_chills"]').prop('checked', false);
+             $('#D__ID input[name="Body_aches"]').prop('checked', false);
+              $('#D__ID input[name="Lethargy"]').prop('checked', false);
+              $('#q2__ID').hide();
+            }
+        })
+      //-------------------------------------
+            //-------------------------------            var before_submit=m.before_submit;
+            var before_submit = m.before_submit;
+            m.before_submit = function (data, index) {
+              if ($('#D__ID [name="Headache"]:checked').val() != 'on' 
+              && $('#D__ID [name="Sore_throat"]:checked').val() != 'on' 
+              && $('#D__ID [name="Blocked_nose"]:checked').val() != 'on'
+              && $('#D__ID [name="Fever_chills"]:checked').val() != 'on'
+              && $('#D__ID [name="Body_aches"]:checked').val() != 'on'
+              && $('#D__ID [name="Lethargy"]:checked').val() != 'on'
+              && $('#D__ID [name="None_of_these"]:checked').val() != 'on'){
+                $vm.alert("Please answer question 1")
+                return false;
+              }
+                return before_submit(data, index);
+            }
+            //-------------------------------------
+
+    }
+  </script>
+  <style>
+    VmInclude:__CURRENT_PATH__/wappsystem-form.css
+  </style>
+</div>

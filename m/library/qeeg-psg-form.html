@@ -1,0 +1,172 @@
+<div id=D__ID>
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id=F__ID>
+                            <h3 id=title__ID></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="row px-4">
+                                    <div class="col-sm-12 col-lg-3 ">
+                                        <span class=label__ID>Participant Identifier</span><br>
+                                        <input type=text name="Participant" class=form-control id=Participant__ID
+                                            data-id="Participant" />
+                                    </div>
+                                    <div class="col-sm-12 col-lg-3">
+                                        <span class=label__ID>Participant ID</span><br>
+                                        <input type=text name="Participant_uid" class=form-control readonly />
+                                    </div>
+                                    <div class="col-sm-12 col-lg-3">
+                                        <span class=label__ID>Visit</span><br>
+                                        <input type=text name="Visit" id=Visit__ID class=form-control readonly/>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <!-- Form Inputs-------------------------------------->
+                            <div class="row px-4">
+                                <div class='col'>
+                                    <span>File Upload</span>
+                                    <div class="form-control">
+                                        <u style='cursor:pointer' id=link_File_Name__ID></u>
+                                        <input type="file" name=File_Name style="margin-top:6px" class='btn btn-primary btn-lg' /><br />
+                                        <br />
+                                        <button id=x_File_Name__ID type="button" class='btn btn-primary btn-lg' onClick="this.form.reset()">Remove</button>
+                                        <button id='submit__ID' type='submit' class='btn btn-primary btn-lg'>Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- Variable Inputs---------------------------------->
+                            <div class='row px-4'><div class='col'><label><span>Sleep Study</span> <input type=text class=form-control name=sleep_study></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Sleep Study Date</span> <input type=text class=form-control name=sleep_study_date></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Clinic Date</span> <input type=text class=form-control name=sleep_clinic_date_match></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Comments</span> <input type=text class=form-control name=Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>PSG System</span> <input type=text class=form-control name=PSG_System></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Time in Bed (minutes)</span> <input type=text class=form-control name=TIB_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Total Sleep Time (minutes)</span> <input type=text class=form-control name=TST_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Sleep Onset Latency (minutes)</span> <input type=text class=form-control name=SOL_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>REM Onset Latency (minutes)</span> <input type=text class=form-control name=ROL_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Wake After Sleep Onset (minutes)</span> <input type=text class=form-control name=WASO_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Sleep Efficiency (%)</span> <input type=text class=form-control name=SE_percent></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>REM Duration (minutes)</span> <input type=text class=form-control name=REM_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Stage 1 Duration (minutes)</span> <input type=text class=form-control name=S1_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Stage 2 Duration (minutes)</span> <input type=text class=form-control name=S2_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Stage 3 Duration (minutes)</span> <input type=text class=form-control name=S3_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Stage 4 Duration (minutes)</span> <input type=text class=form-control name=S4_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>NREM (1+2+3+4) Duration (minutes)</span> <input type=text class=form-control name=NREM_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Slow Wave Sleep (3+4) Duration (minutes)</span> <input type=text class=form-control name=SWS_min></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>REM Duration (%)</span> <input type=text class=form-control name=REM_percent></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Stage 1 Duration (%)</span> <input type=text class=form-control name=S1_percent></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Stage 2 Duration (%)</span> <input type=text class=form-control name=S2_percent></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Stage 3 Duration(%)</span> <input type=text class=form-control name=S3_percent></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Stage 4 Duration (%)</span> <input type=text class=form-control name=S4_percent></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>NREM (1+2+3+4) Duration (%)</span> <input type=text class=form-control name=NREM_percent></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Slow Wave Sleep (3+4) Duration (%)</span> <input type=text class=form-control name=SWS_percent></label> </div></div>                            <!---------------------------------------------------->
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: '__CURRENT_PATH__/shared-form.js'
+            //-------------------------------------
+            $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+            $('#F__ID input[name=File_Name]').on('change', function (evt) {
+                if (this.files.length == 1) {
+                    file_process(this.files[0])
+                }
+            });
+
+            function parseVariableName(str) {
+                if (str == undefined) {
+                    return
+                }
+                str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
+                str = str.trim(); // Trim any <space> characters from start or end of string
+                str = str.replace(/^\d+\s*/, ''); // String cannot start with numbers
+                str = str.split(' ').join('_'); // Join any remaining bits of string with underscores
+                return str;
+            }
+
+            //-------------------------------------
+            // File reader function
+            var file_process = function (file) {
+                // Create a new file reader and on loading a file -> run
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+
+                    ///////////////////////////////////////////////////////////////////////////////
+                    // MANUAL EDIT REQUIRED HERE 
+                    // Specify whether the variabels are listed as rows (false) or as columns (true)
+                    // Specify the delimiter
+                    var columnWise = false;
+                    var delimiter = '=';
+
+                    // Get contents
+                    var contents = e.target.result;
+                    // Split the contents into rows based on the new-line character '\n'
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+
+                    // Extract the data
+                    if (columnWise) { // Column-wise
+                        for (var r = 0; r < rows.length; r++) {
+                            // The first row contains all variable names
+                            if (r == 0) {
+                                var varNames = rows[r].split(delimiter);
+                                // Replace any <space> or other special character
+                                for (v = 0; v < varNames.length; v++) {
+                                    varNames[v] = parseVariableName(varNames[v]);
+                                }
+                            } else {
+                                // The subsequent rows contains the values
+                                var varValues = rows[r].split(delimiter);
+                            }
+                        }
+                    } else { // Row-wise
+                        // Initialize the varNames and varValue arrays
+                        var varNames = Array();
+                        var varValues = Array();
+                        // For each row, extract the variable name and value, and store in the form-input field.
+                        for (var r = 0; r < rows.length; r++) {
+                            // Split the variable name and value pair based on the delimiter
+                            var row = rows[r].split(delimiter);
+                            // If it did not find a pair, continue
+                            if (row.length == 1) {
+                                continue
+                            };
+                            varNames.push(parseVariableName(row[0]));
+                            varValues.push(row[1]);
+                        }
+                    }
+                    // Store the value of each variable in the form-input field
+                    for (var v = 0; v < varNames.length; v++) {
+                        console.log(varNames[v] + ': ' + varValues[v])
+                        $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[v]);
+                    }
+                });
+                reader.readAsText(file);
+            }
+            var old_load = m.load;
+            m.load = function () {
+                old_load();
+                m.set_file_link("File_Name");
+            }
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

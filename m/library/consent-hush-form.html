@@ -1,0 +1,131 @@
+<div id=D__ID>
+
+    <!--third html start -->
+    <div class="container mt-95 mb-3 text-left">
+      <div class="row" >
+
+        <!-- form container start -->
+
+        <div class="col mx-auto formbox">
+          <div class="row">
+            <div class="col-12">
+
+              <!-- form start -->
+                <form id=F__ID>
+                    <h3>PATIENT CONSENT FORM</h3>
+                    <!-- form group -->
+                    <!-- participant part for all tsak forms -------------------->
+                    <div id="participant_div__ID">
+                        <div class="form-group">
+                           <fieldset class="subquestions">
+                               <label ><span class="">Screening Number</span>
+                                   <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant"/>
+                               </label><br>
+                               <label ><span class="">Participant ID</span>
+                                   <input type=text name="Participant_uid" class=form-control readonly />
+                               </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="text-center">
+                            <h4 class='font-weight-bold'>The Hemp Use, Sleep and Health (‘HBA’) Trial
+                            </h4>
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="text-center">
+                            <h4 class='font-weight-bold bg-primary'>Human Ethics Research Committee (HREC) 
+                                CONSENT FORM 1                                
+                            </h4>
+                        </fieldset>
+                    </div>
+                    <div class="form-group text-left">
+                        <fieldset class="">
+                            <h4>
+                                <ol>
+                                    <li>I have read and understood the Participant Information Sheet and agree to take part in the first step of the screening process for the following study:<br><br>
+
+                                        <b>Title:</b>&nbsp;&nbsp;&nbsp; 
+                                        The Hemp Use, Sleep and Health (‘HBA’) Trial: A randomised, double-blind, placebo-controlled study<br><br>
+                                        <b>Ethics Approval Number:</b>&nbsp;&nbsp;&nbsp;
+                                        x
+                                    </li><br>
+                                    <li>I understand that I am being invited to take part because I may be experiencing subthreshold, mild or moderate insomnia for at least 3 months. </li><br>
+                                    <li>I understand that the purpose of this study is to test the effect of a low dose cannabis-based drug on sleep and health in those with chronic insomnia over a 12-week period</li><br>
+                                    <li>I understand that this screening process may or may not result in me being eligible to participate in this study. </li><br>
+                                    <li>I understand that if I meet the eligibility criteria of this step, I will be requested to provide my contact details for a phone interview with the research team. I will also be required to complete a baseline blood test, a drug test; and if female, a pregnancy test as described in the Participant Information Statement.</li><br>
+                                    <li>I consent to the provision of my personal health information for the purposes of the screening process for the Hemp Use, Sleep and Health (‘HBA’) Trial.</li><br>
+                                    <li>My consent to participate in the screening process is given freely.  </li><br>
+                                    <li>I understand that my information will only be used for the purposes of this research study and it will only be disclosed according to the consent provided, except where disclosure is required by law.  </li><br>
+                                    <li>I am aware that I should keep a copy the Patient Information Sheet for future reference.  </li><br>
+                                    <li>I understand that this screening process may or may not result in me being eligible to participate in this study. </li><br>
+                                </ol>
+                                Please note, if there are any aspects of this study, consent form or screening process that you do not understand, please contact the research team prior to completing this consent form. 
+                            </h4>
+                        </fieldset>
+                    </div>
+                    <div class="form-group text-left">
+                        <fieldset class="subquestions">
+                            <h4 class='font-weight-bold'>I consent to participate in the screening process for the Hemp Use, Sleep and Health (HBA) trial according to the abovementioned criteria:</h4>
+                            <label class="radiobuttons">
+                              <input type="radio" name="Consent" value="Yes" required >
+                              <span class="checkmark"></span> Yes</label>
+                            <label class="radiobuttons">
+                              <input type="radio" name="Consent" value="No">
+                              <span class="checkmark"></span> No</label>
+                        </fieldset>
+                    </div>
+                    <div id=consent_no_text__ID>
+                        <div class="form-group">
+                            <fieldset class="subquestions">
+                                <h4>In order to participate in the study you must consent.
+                                </h4>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div >
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude: __COMPONENT__/f/form.01.js
+            VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            m.default_load = m.load;
+            m.load = function () {
+                m.default_load();
+                $('#submit__ID').show();
+                $('#consent_no_text__ID').hide();
+                $('#D__ID').scrollTop(0);
+                $(window).scrollTop(0);
+                m.input.goback=1;
+            }
+            //--------------------------------------------------------
+            $("#D__ID input[name=Consent]").on('click', function () {
+                console.log($(this).attr('value'))
+                if ($(this).attr('value') != 'No' ) { $('#submit__ID').show(); $('#consent_no_text__ID').hide(); }
+                else { $('#submit__ID').hide(); $('#consent_no_text__ID').show(); }
+            })
+            //--------------------------------------------------------
+            $('#D__ID').css('min-height',$vm.min_height);
+            //--------------------------------------------------------
+            $(this).scrollTop(0);
+        }
+    </script>
+    <style>
+        #D__ID{
+            height:100%;
+            animation: vm_module_fadein 1.0s;
+            overflow: auto;
+        }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

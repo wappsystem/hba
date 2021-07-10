@@ -1,0 +1,31 @@
+<section>
+  VmInclude:__CURRENT_PATH__/grid.v1h.html
+</section>
+<script>
+  function F__ID(){
+      //-------------------------------------
+      VmInclude:__COMPONENT__/g/grid.01.js
+      VmInclude:__CURRENT_PATH__/shared-data.js
+      //-------------------------------------
+      var fields="driven,frequency,confidence,speeding,parking,minor,major,driving";
+      m.fields="_Form,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+      //-------------------------------------
+        //-------------------------------------
+        var cell_render = m.cell_render;
+        m.cell_render=function(records,I,field,td){
+            switch(field){
+                case 'speeding':
+                case 'parking':
+                case 'minor':
+                case 'major':
+                if(records[I].Data[field]=="on") td.html("Checked");
+                else td.html("")
+                    break;
+            }
+            return cell_render(records,I,field,td);
+        }
+  }
+</script>
+<style>
+  VmInclude:__COMPONENT__/g/grid.01.css
+</style>

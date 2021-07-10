@@ -1,0 +1,763 @@
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id=title__ID></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Screening Number</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <!-- form group -->
+                            <div class="form-group">
+                                <h4>You will be asked about your physical activity behaviour in this section of the
+                                    questionnaire.</h4>
+                            </div>
+                            <div class="form-group">
+                                <h4>Have you completed any of the following forms of physical activity during the
+                                    last 7 days? Select all that apply and answer the questions that follow below.</h4>
+                                <div class="questiongroup">
+                                    <fieldset>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Work_check">
+                                            <span class="check_checkmark"></span> Work-related Physical Activity<br>
+                                            Physical activity that is performed as part of a job, e.g. heavy manual
+                                            labour
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Incidental_check">
+                                            <span class="check_checkmark"></span> Incidental Physical Activity<br>
+                                            Physical activity that is performed as part of everyday life, e.g.
+                                            housework, walking to the local shop instead of driving, gardening, and
+                                            vacuuming.
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Leisure_check">
+                                            <span class="check_checkmark"></span> Leisure Physical Activity<br>
+                                            Leisure pursuits that involve physical activity, e.g. dancing.
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="Structured_check">
+                                            <span class="check_checkmark"></span> Structured Sport and/or Exercise<br>
+                                            This includes light aerobic exercise (e.g. brisk walking, light cycling,
+                                            light swimming), heavy aerobic exercise (e.g. running, cycling, swimming),
+                                            stretching exercise (e.g. yoga, tai chi), strengthening exercise, low
+                                            intensity games (e.g. golf, lawn bowls), high intensity games (e.g. tennis,
+                                            soccer, football) and other.
+                                        </label><br>
+                                        <label class="checkboxes">
+                                            <input type="checkbox" name="No_activity_check">
+                                            <span class="check_checkmark"></span> I have not performed any physical
+                                            activity in the last 7 days</label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id=q2__ID>
+                                <div class="form-group">
+                                    <h4>You performed Work-related Physical Activity in the last 7 days.<br>
+                                        Please consider how you felt when performing this activity (or these activities)
+                                        and compare this to how you usually feel (or how you would expect to feel). On
+                                        average, did the following feeling(s) increase, decrease, or remain about the
+                                        same?
+                                    </h4>
+                                    <fieldset class="">
+                                        <label>Feeling of Exertion</label>
+                                        <div class="row">
+                                            <div class="col-sm control-group text-center">
+                                                <label><span><i>It felt about the same</i></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 control-group text-left">
+                                                <label><span><i>It felt harder</i></span></label><input type="text"
+                                                    id="Work_req__ID" required
+                                                    style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                            </div>
+                                            <div class="col-sm-8 control-group">
+                                                <div class="slidecontainer" id=Work_con__ID>
+                                                    <input type="range" min="0" max="100" class="slider" name="Work"
+                                                        id="Work__ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 control-group text-right">
+                                                <label><span><i>It felt easier</i></span></label><br>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id=q3__ID>
+                                <div class="form-group">
+                                    <h4>You performed Incidental Physical Activity in the last 7 days.<br>
+                                        Please consider how you felt when performing this activity (or these activities)
+                                        and compare this to how you usually feel (or how you would expect to feel). On
+                                        average, did the following feeling(s) increase, decrease, or remain about the
+                                        same?
+                                    </h4>
+                                    <fieldset class="">
+                                        <label>Feeling of Exertion</label>
+                                        <div class="row">
+                                            <div class="col-sm control-group text-center">
+                                                <label><span><i>It felt about the same</i></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 control-group text-left">
+                                                <label><span><i>It felt harder</i></span></label><input type="text"
+                                                    id="Incidental_req__ID" required
+                                                    style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                            </div>
+                                            <div class="col-sm-8 control-group">
+                                                <div class="slidecontainer" id=Incidental_con__ID>
+                                                    <input type="range" min="0" max="100" class="slider"
+                                                        name="Incidental" id="Incidental__ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 control-group text-right">
+                                                <label><span><i>It felt easier</i></span></label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id=q4__ID>
+                                <div class="form-group">
+                                    <h4>You performed Leisure Physical Activity in the last 7 days.<br>
+                                        Please consider how you felt when performing this activity (or these activities)
+                                        and compare this to how you usually feel (or how you would expect to feel). On
+                                        average, did the following feeling(s) increase, decrease, or remain about the
+                                        same?
+                                    </h4>
+                                    <fieldset class="">
+                                        <label>Feeling of Exertion</label>
+                                        <div class="row">
+                                            <div class="col-sm control-group text-center">
+                                                <label><span><i>It felt about the same</i></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 control-group text-left">
+                                                <label><span><i>It felt harder</i></span></label><input type="text"
+                                                    id="Leisure_req__ID" required
+                                                    style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                            </div>
+                                            <div class="col-sm-8 control-group">
+                                                <div class="slidecontainer" id=Leisure_con__ID>
+                                                    <input type="range" min="0" max="100" class="slider" name="Leisure"
+                                                        id="Leisure__ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 control-group text-right">
+                                                <label><span><i>It felt easier</i></span></label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div id=q5__ID>
+                                <div class="form-group">
+                                    <h4>You performed Structured Sport and(or) Exercise in the last 7 days.<br>
+                                        What type(s) of activity(ies) did you engage in? (Select all that apply).
+                                    </h4>
+                                    <div class="questiongroup">
+                                        <fieldset>
+                                            <label class="checkboxes">
+                                                <input type="checkbox" name="Light_aerobic">
+                                                <span class="check_checkmark"></span> Light aerobic exercise (e.g. brisk
+                                                walking, light cycling, light swimming)
+                                            </label><br>
+                                            <label class="checkboxes">
+                                                <input type="checkbox" name="Heavy_aerobic">
+                                                <span class="check_checkmark"></span> Heavy aerobic exercise (e.g.
+                                                running, cycling, swimming)
+                                            </label><br>
+                                            <label class="checkboxes">
+                                                <input type="checkbox" name="Stretching">
+                                                <span class="check_checkmark"></span> Stretching exercise (e.g. yoga,
+                                                tai chi)
+                                            </label><br>
+                                            <label class="checkboxes">
+                                                <input type="checkbox" name="Strengthening">
+                                                <span class="check_checkmark"></span> Strengthening exercise
+                                            </label><br>
+                                            <label class="checkboxes">
+                                                <input type="checkbox" name="Low_intensity">
+                                                <span class="check_checkmark"></span> Low intensity games (e.g. golf,
+                                                lawn bowls)
+                                            </label><br>
+                                            <label class="checkboxes">
+                                                <input type="checkbox" name="High_intensity">
+                                                <span class="check_checkmark"></span> High intensity games (e.g. tennis,
+                                                soccer, football)
+                                            </label><br>
+                                            <label class="checkboxes">
+                                                <input type="checkbox" name="Other">
+                                                <span class="check_checkmark"></span> Other; Please specify:
+                                            </label>
+                                            <label>
+                                                <input class=form-control type="text" name="Other_Specify"><span></span></label>
+                                        </fieldset>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <h4>Please consider how you felt when performing this activity (or these
+                                        activities) and compare this to how you usually feel (or how you would expect to
+                                        feel).<br>
+                                        On average, did the following feeling(s) increase, decrease, or remain about the
+                                        same?
+
+                                    </h4>
+                                    <fieldset class="">
+                                        <label>Feeling of Exertion</label>
+
+                                        <div class="row">
+                                            <div class="col-sm control-group text-center">
+                                                <label><span><i>It felt about the same</i></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 control-group text-left">
+                                                <label><span><i>It felt harder</i></span></label><input type="text"
+                                                    id="Structured_Exertion_req__ID" required
+                                                    style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                            </div>
+                                            <div class="col-sm-8 control-group">
+                                                <div class="slidecontainer" id=Structured_Exertion_con__ID>
+                                                    <input type="range" min="0" max="100" class="slider"
+                                                        name="Structured_Exertion" id="Structured_Exertion__ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 control-group text-right">
+                                                <label><span><i>It felt easier</i></span></label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group">
+                                    <fieldset class="">
+                                        <label>Feeling of Enjoyment</label>
+
+                                        <div class="row">
+                                            <div class="col-sm control-group text-center">
+                                                <label><span><i>It felt about the same</i></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 control-group text-left">
+                                                <label><span><i>It felt less enjoyable</i></span></label><input type="text"
+                                                    id="Structured_Enjoyment_req__ID" required
+                                                    style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                            </div>
+                                            <div class="col-sm-8 control-group">
+                                                <div class="slidecontainer" id=Structured_Enjoyment_con__ID>
+                                                    <input type="range" min="0" max="100" class="slider"
+                                                        name="Structured_Enjoyment" id="Structured_Enjoyment__ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 control-group text-right">
+                                                <label><span><i>It felt more enjoyable</i></span></label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group">
+                                    <fieldset class="">
+                                        <label>Feeling of Pain or Soreness (During Exercise)</label>
+
+                                        <div class="row">
+                                            <div class="col-sm control-group text-center">
+                                                <label><span><i>It felt about the same</i></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 control-group text-left">
+                                                <label><span><i>It felt more painful</i></span></label><input type="text"
+                                                    id="Structured_Pain_req__ID" required
+                                                    style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                            </div>
+                                            <div class="col-sm-8 control-group">
+                                                <div class="slidecontainer" id=Structured_Pain_con__ID>
+                                                    <input type="range" min="0" max="100" class="slider"
+                                                        name="Structured_Pain" id="Structured_Pain__ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 control-group text-right">
+                                                <label><span><i>It felt less painful</i></span></label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group">
+                                    <fieldset class="">
+                                        <label>Feeling of Pain or Soreness (After Exercise)</label>
+                                        <div class="row">
+                                            <div class="col-sm control-group text-center">
+                                                <label><span><i>It felt about the same</i></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 control-group text-left">
+                                                <label><span><i>It felt more painful</i></span></label><input type="text"
+                                                    id="Structured_Pain_After_req__ID" required
+                                                    style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                            </div>
+                                            <div class="col-sm-8 control-group">
+                                                <div class="slidecontainer" id=Structured_Pain_After_con__ID>
+                                                    <input type="range" min="0" max="100" class="slider"
+                                                        name="Structured_Pain_After" id="Structured_Pain_After__ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 control-group text-right">
+                                                <label><span><i>It felt less painful</i></span></label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group">
+                                    <fieldset class="">
+                                        <label>Overall Performance</label>
+                                        <div class="row">
+                                            <div class="col-sm control-group text-center">
+                                                <label><span><i>It felt I performed about the same</i></span></label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2 control-group text-left">
+                                                <label><span><i>I felt I performed worse</i></span></label><input type="text"
+                                                    id="Structured_Performance_req__ID" required
+                                                    style="width:1px;height:1px;background:rgba(255,255,255,0.95);border:0">
+                                            </div>
+                                            <div class="col-sm-8 control-group">
+                                                <div class="slidecontainer" id=Structured_Performance_con__ID>
+                                                    <input type="range" min="0" max="100" class="slider"
+                                                        name="Structured_Performance" id="Structured_Performance__ID">
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2 control-group text-right">
+                                                <label><span><i>I felt I performed better</i></span></label>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //---------------------------------------------
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: __COMPONENT__/f/form.01.js
+            VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            var load2 = m.load;
+            m.load = function () {
+                load2();
+                if (m.input.record != undefined) {
+                    if(m.input.record.Data.Work!="") {
+                        $('#D__ID input[name=Work]').val((parseFloat(m.input.record.Data.Work)*10+50).toFixed(0))
+                        $('<style>#Work_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                        $('#Work_req__ID').val("OK")
+                    }
+                    else{
+                        $('<style>#Work_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                        $('#Incidental_req__ID').val("")
+                    }
+                    if(m.input.record.Data.Incidental!="") {
+                        $('#D__ID input[name=Incidental]').val((parseFloat(m.input.record.Data.Incidental)*10+50).toFixed(0))
+                        $('<style>#Incidental_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                        $('#Incidental_req__ID').val("OK")
+                    }
+                    else {                
+                        $('<style>#Incidental_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                        $('#Incidental_req__ID').val("")
+                    }
+                    if(m.input.record.Data.Leisure!="") {
+                        $('#D__ID input[name=Leisure]').val((parseFloat(m.input.record.Data.Leisure)*10+50).toFixed(0))
+                        $('<style>#Leisure_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                        $('#Leisure_req__ID').val("OK")
+                    }
+                    else{
+                        console.log('<style>#Leisure_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>')
+                        $('<style>#Leisure_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                        $('#Leisure_req__ID').val("")
+                    }
+                    if(m.input.record.Data.Structured_Exertion!="") {
+                        $('#D__ID input[name=Structured_Exertion]').val((parseFloat(m.input.record.Data.Structured_Exertion)*10+50).toFixed(0))
+                        $('<style>#Structured_Exertion_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Exertion_req__ID').val("OK")
+                    }
+                    else {                
+                        $('<style>#Structured_Exertion_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Exertion_req__ID').val("")
+                    }
+                    if(m.input.record.Data.Structured_Enjoyment!="") {
+                        $('#D__ID input[name=Structured_Enjoyment]').val((parseFloat(m.input.record.Data.Structured_Enjoyment)*10+50).toFixed(0))
+                        $('<style>#Structured_Enjoyment_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Enjoyment_req__ID').val("OK")
+                    }
+                    else {                
+                        $('<style>#Structured_Enjoyment_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Enjoyment_req__ID').val("")
+                    }
+                    if(m.input.record.Data.Structured_Pain!="") {
+                        $('#D__ID input[name=Structured_Pain]').val((parseFloat(m.input.record.Data.Structured_Pain)*10+50).toFixed(0))
+                        $('<style>#Structured_Pain_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Pain_req__ID').val("OK")
+                    }
+                    else {                
+                        $('<style>#Structured_Pain_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Pain_req__ID').val("")
+                    }
+                    if(m.input.record.Data.Structured_Pain_After!="") {
+                        $('#D__ID input[name=Structured_Pain_After]').val((parseFloat(m.input.record.Data.Structured_Pain_After)*10+50).toFixed(0))
+                        $('<style>#Structured_Pain_After_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Pain_After_req__ID').val("OK")
+                    }
+                    else {                
+                        $('<style>#Structured_Pain_After_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Pain_After_req__ID').val("")
+                    }
+                    if(m.input.record.Data.Structured_Performance!="") {
+                        $('#D__ID input[name=Structured_Performance]').val((parseFloat(m.input.record.Data.Structured_Performance)*10+50).toFixed(0))
+                        $('<style>#Structured_Performance_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Performance_req__ID').val("OK")
+                    }
+                    else {                
+                        $('<style>#Structured_Performance_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                        $('#Structured_Performance_req__ID').val("")
+                    }
+                }
+                else{
+                    $('<style>#Work_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Incidental_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Leisure_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Exertion_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Enjoyment_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #d3d3d3; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Pain_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Pain_After_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                    $('<style>#Structured_Performance_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 0; height: 0; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                }
+                $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+                //-------------------------------
+                if ($('#D__ID [name="Work_check"]:checked').val() == 'on') {
+                    $('#q2__ID').show();
+                    $("#Work_req__ID").prop('required', true);
+                    $('#D__ID input[name="No_activity_check"]').prop('checked', false);
+                }
+                else {
+                    $("#Work_req__ID").prop('required', false);
+                    $('#q2__ID').hide();
+                }
+                if ($('#D__ID input[name="Incidental_check"]:checked').val() == 'on') {
+                    $('#q3__ID').show();
+                    $("#Incidental_req__ID").prop('required', true);
+                    $('#D__ID input[name="No_activity_check"]').prop('checked', false);
+                }
+                else {
+                    $("#Incidental_req__ID").prop('required', false);
+                    $('#q3__ID').hide();
+                }
+                if ($('#D__ID input[name="Leisure_check"]:checked').val() == 'on') {
+                    $('#q4__ID').show();
+                    $("#Leisure_req__ID").prop('required', true);
+                    $('#D__ID input[name="No_activity_check"]').prop('checked', false);
+                }
+                else {
+                    $('#q4__ID').hide();
+                    $("#Leisure_req__ID").prop('required', false);
+                }
+                if ($('#D__ID input[name="Structured_check"]:checked').val() == 'on') {
+                    $('#q5__ID').show();
+                    $("#Structured_Exertion_req__ID").prop('required', true);
+                    $("#Structured_Enjoyment_req__ID").prop('required', true);
+                    $("#Structured_Pain_req__ID").prop('required', true);
+                    $("#Structured_Pain_After_req__ID").prop('required', true);
+                    $("#Structured_Performance_req__ID").prop('required', true);
+                    $('#D__ID input[name="No_activity_check"]').prop('checked', false);
+                }
+                else {
+                    $('#q5__ID').hide();
+                    $("#Structured_Exertion_req__ID").prop('required', false);
+                    $("#Structured_Enjoyment_req__ID").prop('required', false);
+                    $("#Structured_Pain_req__ID").prop('required', false);
+                    $("#Structured_Pain_After_req__ID").prop('required', false);
+                    $("#Structured_Performance_req__ID").prop('required', false);
+                }
+                if ($('#D__ID input[name="No_activity_check"]:checked').val() == 'on') {
+                    $('#q2__ID').hide();
+                    $("#Work_req__ID").prop('required', false);
+                    $('#q3__ID').hide();
+                    $("#Incidental_req__ID").prop('required', false);
+                    $('#q4__ID').hide();
+                    $("#Leisure_req__ID").prop('required', false);
+                    $('#q5__ID').hide();
+                    $("#Structured_Exertion_req__ID").prop('required', false);
+                    $("#Structured_Enjoyment_req__ID").prop('required', false);
+                    $("#Structured_Pain_req__ID").prop('required', false);
+                    $("#Structured_Pain_After_req__ID").prop('required', false);
+                    $("#Structured_Performance_req__ID").prop('required', false);
+                }
+                if ($('#D__ID input[name="Other"]:checked').val() == 'on') {
+                    $("#D__ID input[name=Other_Specify]").prop('required', true);
+                }
+                else {
+                    $("#D__ID input[name=Other_Specify]").prop('required', false);
+                }
+            }
+            //-------------------------------
+            $('#D__ID input[name="Work_check"]').on('click', function () {
+                if ($('#D__ID input[name="Work_check"]:checked').val() == 'on') {
+                    $('#q2__ID').show();
+                    $("#Work_req__ID").prop('required', true);
+                    $('#D__ID input[name="No_activity_check"]').prop('checked', false);
+                }
+                else {
+                    $("#Work_req__ID").prop('required', false);
+                    $('#q2__ID').hide();
+                }
+            })
+            $('#D__ID input[name="Incidental_check"]').on('click', function () {
+                if ($('#D__ID input[name="Incidental_check"]:checked').val() == 'on') {
+                    $('#q3__ID').show();
+                    $("#Incidental_req__ID").prop('required', true);
+                    $('#D__ID input[name="No_activity_check"]').prop('checked', false);
+                }
+                else {
+                    $("#Incidental_req__ID").prop('required', false);
+                    $('#q3__ID').hide();
+                }
+            })
+            $('#D__ID input[name="Leisure_check"]').on('click', function () {
+                if ($('#D__ID input[name="Leisure_check"]:checked').val() == 'on') {
+                    $('#q4__ID').show();
+                    $("#Leisure_req__ID").prop('required', true);
+                    $('#D__ID input[name="No_activity_check"]').prop('checked', false);
+                }
+                else {
+                    $("#Leisure_req__ID").prop('required', false);
+                    $('#q4__ID').hide();
+                }
+            })
+            $('#D__ID input[name="Structured_check"]').on('click', function () {
+                if ($('#D__ID input[name="Structured_check"]:checked').val() == 'on') {
+                    $('#q5__ID').show();
+                    $("#Structured_Exertion_req__ID").prop('required', true);
+                    $("#Structured_Enjoyment_req__ID").prop('required', true);
+                    $("#Structured_Pain_req__ID").prop('required', true);
+                    $("#Structured_Pain_After_req__ID").prop('required', true);
+                    $("#Structured_Performance_req__ID").prop('required', true);
+                    $('#D__ID input[name="No_activity_check"]').prop('checked', false);
+                }
+                else {
+                    $('#q5__ID').hide();
+                    $("#Structured_Exertion_req__ID").prop('required', false);
+                    $("#Structured_Enjoyment_req__ID").prop('required', false);
+                    $("#Structured_Pain_req__ID").prop('required', false);
+                    $("#Structured_Pain_After_req__ID").prop('required', false);
+                    $("#Structured_Performance_req__ID").prop('required', false);
+                }
+            })
+            $('#D__ID input[name="No_activity_check"]').on('click', function () {
+                if ($('#D__ID input[name="No_activity_check"]:checked').val() == 'on') {
+                    $('#q2__ID').show();
+                    $("#Work_req__ID").prop('required', true);
+                    $("#D__ID input[name=Work_check]").prop('checked', false);
+                    $('#q2__ID').hide();
+                    $('#q3__ID').show();
+                    $("#Incidental_req__ID").prop('required', true);
+                    $("#D__ID input[name=Incidental_check]").prop('checked', false);
+                    $('#q3__ID').hide();
+                    $('#q4__ID').show();
+                    $("#Leisure_req__ID").prop('required', false);
+                    $("#D__ID input[name=Leisure_check]").prop('checked', false);
+                    $('#q4__ID').hide();
+                    $('#q5__ID').show();
+                    $("#D__ID input[name=Structured_check]").prop('checked', false);
+                    $("#Structured_Exertion_req__ID").prop('required', false);
+                    $("#Structured_Enjoyment_req__ID").prop('required', false);
+                    $("#Structured_Pain_req__ID").prop('required', false);
+                    $("#Structured_Pain_After_req__ID").prop('required', false);
+                    $("#Structured_Performance_req__ID").prop('required', false);
+                    $('#q5__ID').hide();
+                }
+            });
+            //-------------------------------
+            $('#D__ID input[name="Other"]').on('click', function () {
+                if ($('#D__ID input[name="Other"]:checked').val() == 'on') {
+                    $("#D__ID input[name=Other_Specify]").prop('required', true);
+                }
+                else {
+                    $("#D__ID input[name=Other_Specify]").prop('required', false);
+                }
+            })
+            //-------------------------------
+            $('#Work__ID').on('click', function () {
+                $('<style>#Work_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#Work_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#Incidental__ID').on('click', function () {
+                $('<style>#Incidental_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#Incidental_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#Leisure__ID').on('click', function () {
+                $('<style>#Leisure_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#Leisure_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#Structured_Exertion__ID').on('click', function () {
+                $('<style>#Structured_Exertion_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#Structured_Exertion_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#Structured_Enjoyment__ID').on('click', function () {
+                $('<style>#Structured_Enjoyment_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#Structured_Enjoyment_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#Structured_Pain__ID').on('click', function () {
+                $('<style>#Structured_Pain_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#Structured_Pain_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#Structured_Pain_After__ID').on('click', function () {
+                $('<style>#Structured_Pain_After_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#Structured_Pain_After_req__ID').val("OK")
+            })
+            //-------------------------------
+            $('#Structured_Performance__ID').on('click', function () {
+                $('<style>#Structured_Performance_con__ID input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 5px; height: 25px; background: #EA7859; cursor: pointer; }</style>').appendTo('head');
+                $('#Structured_Performance_req__ID').val("OK")
+            })
+            //-------------------------------            var before_submit=m.before_submit;
+            var before_submit = m.before_submit;
+            m.before_submit = function (data, index) {
+                if($('#Work_req__ID').val()=="OK"){
+                    data.Work=((parseFloat($('#D__ID input[name=Work]').val())-50)/10).toFixed(1);
+                }
+                else {
+                    data.Work="";
+                }
+                if($('#Incidental_req__ID').val()=="OK"){
+                    data.Incidental=((parseFloat($('#D__ID input[name=Incidental]').val())-50)/10).toFixed(1);
+                }
+                else {
+                    data.Incidental="";
+                }
+                if($('#Leisure_req__ID').val()=="OK"){
+                    data.Leisure=((parseFloat($('#D__ID input[name=Leisure]').val())-50)/10).toFixed(1);
+                }
+                else {
+                    data.Leisure="";
+                }
+                if($('#Structured_Exertion_req__ID').val()=="OK"){
+                    data.Structured_Exertion=((parseFloat($('#D__ID input[name=Structured_Exertion]').val())-50)/10).toFixed(1);
+                }
+                else {
+                    data.Structured_Exertion="";
+                }
+                if($('#Structured_Enjoyment_req__ID').val()=="OK"){
+                    data.Structured_Enjoyment=((parseFloat($('#D__ID input[name=Structured_Enjoyment]').val())-50)/10).toFixed(1);
+                }
+                else {
+                    data.Structured_Enjoyment="";
+                }
+                if($('#Structured_Pain_req__ID').val()=="OK"){
+                    data.Structured_Pain=((parseFloat($('#D__ID input[name=Structured_Pain]').val())-50)/10).toFixed(1);
+                }
+                else {
+                    data.Structured_Pain="";
+                }
+                if($('#Structured_Pain_After_req__ID').val()=="OK"){
+                    data.Structured_Pain_After=((parseFloat($('#D__ID input[name=Structured_Pain_After]').val())-50)/10).toFixed(1);
+                }
+                else {
+                    data.Structured_Pain_After="";
+                }
+                if($('#Structured_Performance_req__ID').val()=="OK"){
+                    data.Structured_Performance=((parseFloat($('#D__ID input[name=Structured_Performance]').val())-50)/10).toFixed(1);
+                }
+                else {
+                    data.Structured_Performance="";
+                }
+                return before_submit(data, index);
+            }
+            //-------------------------------------
+
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 600px;
+        }
+
+        #D__ID .slidecontainer {
+            width: 100%;
+            padding-bottom: 30px;
+            /* Width of the outside container */
+        }
+
+        /* The slider itself */
+        #D__ID .slider {
+            -webkit-appearance: none;
+            /* Override default CSS styles */
+            appearance: none;
+            width: 100%;
+            /* Full-width */
+            height: 10px;
+            /* Specified height */
+            background: #d3d3d3;
+            /* Grey background */
+            outline: none;
+            /* Remove outline */
+            opacity: 0.7;
+            /* Set transparency (for mouse-over effects on hover) */
+            -webkit-transition: .2s;
+            /* 0.2 seconds transition on hover */
+            transition: opacity .2s;
+        }
+
+        /* Mouse-over effects */
+        #D__ID .slider:hover {
+            opacity: 1;
+            /* Fully shown on mouse-over */
+        }
+
+        /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+        #D__ID .slider::-moz-range-thumb {
+            width: 25px;
+            /* Set a specific slider handle width */
+            height: 25px;
+            /* Slider handle height */
+            background: #EA7859;
+            /* Green background */
+            cursor: pointer;
+            /* Cursor on hover */
+        }
+
+        VmInclude:__CURRENT_PATH__/../../library/wappsystem-form.css
+    </style>
+</div>

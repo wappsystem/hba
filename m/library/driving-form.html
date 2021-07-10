@@ -1,0 +1,190 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95 mb-3">
+    <div class="row">
+      <!-- form container start -->
+      <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+        <div class="row">
+          <div class="col-12">
+            <!-- form start -->
+            <form id=F__ID>
+              <!---------------------------------------------------->
+              <h3 id=title__ID></h3>
+              <!-- participant part for all tsak forms -------------------->
+              <div id="participant_div__ID">
+                <div class="form-group">
+                  <fieldset class="subquestions">
+                    <label><span class="">Screening Number</span>
+                      <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </label><br>
+                    <label><span class="">Participant ID</span>
+                      <input type=text name="Participant_uid" class=form-control readonly />
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <!-- form group -->
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-sm control-group">
+                    <h4>1. In the past 2 weeks, have you driven a motor vehicle?</h4>
+                  </div>
+                </div>
+                <div class="questiongroup">
+                  <fieldset class="pl-4">
+                    <label class="radiobuttons ">
+                      <input type="radio" name="driven" value="Yes" required>
+                      <span class="checkmark"></span>Yes</label>
+                    <label class="radiobuttons ">
+                      <input type="radio" name="driven" value="No">
+                      <span class="checkmark"></span>No</label>
+                  </fieldset>
+                </div>
+              </div>
+              <div id=q2__ID>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm control-group">
+                      <h4>2. In the past 2 weeks, how often have you driven </h4>
+                    </div>
+                  </div>
+                  <div class="questiongroup">
+                    <fieldset class="pl-4">
+                      <label><span class=""></span>
+                        <select name="frequency" class=form-control>
+                          <option></option>
+                          <option>Not at all</option>
+                          <option>A few times a week</option>
+                          <option>At least once a day</option>
+                          <option>Multiple times per day</option>
+                        </select>
+                      </label><br>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm control-group">
+                      <h4>3. In the past 2 weeks, has your confidence to drive been impacted?</h4>
+                    </div>
+                  </div>
+                  <div class="questiongroup">
+                    <fieldset class="pl-4">
+                      <label><span class=""></span>
+                        <select name="confidence" class=form-control>
+                          <option></option>
+                          <option>Unaffected</option>
+                          <option>Affected mildly</option>
+                          <option>Affected moderately</option>
+                          <option>Affected severely</option>
+                        </select>
+                      </label><br>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <h4>4. In the past 2 weeks, have you had any speeding tickets, parking fines, minor collision or major collision?</h4>
+                  <div class="questiongroup">
+                      <fieldset>
+                          <label class="checkboxes">
+                              <input type="checkbox" name="speeding">
+                              <span class="check_checkmark"></span> Speeding ticket
+                          </label><br>
+                          <label class="checkboxes">
+                              <input type="checkbox" name="parking">
+                              <span class="check_checkmark"></span> Parking fines
+                          </label><br>
+                          <label class="checkboxes">
+                              <input type="checkbox" name="minor">
+                              <span class="check_checkmark"></span> Minor collision
+                          </label><br>
+                          <label class="checkboxes">
+                              <input type="checkbox" name="major">
+                              <span class="check_checkmark"></span> Major collision
+                          </label><br>
+                      </fieldset>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm control-group">
+                      <h4>5. In the past 2 weeks, do you believe that you driving has been unchanged, worse than usual or better than usual?</h4>
+                    </div>
+                  </div>
+                  <div class="questiongroup">
+                    <fieldset class="pl-4">
+                      <label><span class=""></span>
+                        <select name="driving" class=form-control>
+                          <option></option>
+                          <option>Unchanged</option>
+                          <option>Worse than usual</option>
+                          <option>Better than usual</option>
+                        </select>
+                      </label><br>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function F__ID() {
+      //-------------------------------------
+      VmInclude: __COMPONENT__/f/form.01.js
+      VmInclude: __CURRENT_PATH__/shared-form.js
+      //-------------------------------------
+      var load2 = m.load;
+      m.load = function () {
+        load2();
+        //-------------------------------------
+        if ($("#D__ID input[name=driven]:checked").val() != 'No' && $("#D__ID input[name=driven]:checked").val() != undefined) {
+          $("#D__ID select[name=frequency]").prop('required', true);
+          $("#D__ID select[name=confidence]").prop('required', true);
+          $("#D__ID input[name=driving]").prop('required', true);
+          $("#q2__ID").show();
+        }
+        else {
+          $("#D__ID select[name=frequency]").prop('required', false);
+          $("#D__ID select[name=confidence]").prop('required', false);
+          $("#D__ID input[name=driving]").prop('required', false);
+          $("#q2__ID").hide();
+        }
+      }
+      //-------------------------------------
+      $("#D__ID input[name=driven]").on('click', function () {
+        if ($("#D__ID input[name=drive]:checked").val() != 'No') {
+          $("#D__ID select[name=frequency]").prop('required', true);
+          $("#D__ID select[name=confidence]").prop('required', true);
+          $("#D__ID input[name=driving]").prop('required', true);
+          $("#q2__ID").show();
+        }
+        else {
+          $("#D__ID select[name=frequency]").prop('required', false);
+          $("#D__ID select[name=confidence]").prop('required', false);
+          $("#D__ID input[name=driving]").prop('required', false);
+          $("#q2__ID").hide();
+        }
+      })
+      var before_submit=m.before_submit;
+      m.before_submit=function(data,index){
+        return before_submit(data,index);
+      }
+      //-------------------------------------
+
+   }
+  </script>
+  <style>
+    #D__ID .mt-95 {
+      max-width: 600px;
+    }
+
+    VmInclude:__CURRENT_PATH__/wappsystem-form.css
+  </style>
+</div>

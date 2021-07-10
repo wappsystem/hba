@@ -1,0 +1,202 @@
+<div id=D__ID>
+    <div>
+            VmInclude:__CURRENT_PATH__/grid.01.del.hp.html
+        </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js       
+            //-------------------------------------
+            //$('#title__ID').text('Visits');            
+            //-------------------------------------
+            var fields="_Record_ID,Visit,Visit_Date,Days since Baseline|Days_Baseline,_Data_Entry,_Setup,_Questionnaire,_Login_ID,_Password";
+            m.fields="_Form,"+fields+",Submit_date,Submitted_by";
+            //console.log(JSON.stringify(m.input))
+            $('#title__ID').text('Visits, Participant: '+m.input.record.Data.ABC_ID+' - '+m.input.record.Data.initials);
+            //-------------------------------------
+            var p_record;
+            var bl_date="";
+			m.load = function () {
+                console.log("LOAD:"+m.input.child)
+                p_record=m.input.record;
+            }
+            //-------------------------------------
+            m.cell_render=function(records,I,field,td,set_value,source){
+                switch(field){
+                    case '_Record_ID':
+                        td.html(records[I].UID);
+                        break;
+                    case '_Data_Entry':
+                        td.html("<u style='cursor:pointer'>Data Entry</u>");
+                        td.find('u').on('click',function(){
+                            console.log("AA: "+m.input.child)
+    						$vm.load_module(m.input.child,'',{record:records[I],p_record:p_record,from:"visit"});
+                        });
+                        break;
+                    case '_Setup':
+                        td.html("<u style='cursor:pointer'>Setup</u>");
+                        td.find('u').on('click',function(){
+    						$vm.load_module(m.questionnaire_setup,'',{record:records[I],p_record:p_record});
+                        });
+                        break;                        
+                    case '_Questionnaire':
+                        //MongoDB
+                        td.html("<u style='cursor:pointer'>Online Questionnaire</u>");
+                        td.find('u').on('click',function(){
+                            var db=""; if(window.location.toString().indexOf('db=dev')!=-1) db="&db=dev";
+                            var d="";  if(window.location.toString().indexOf('_d=1')!=-1) d="&_d=1";
+                            var p="";  if(window.location.toString().indexOf('_p=1')!=-1) p="&_p=1";
+                            var u="?username="+p_record.UID+"-"+p_record.Data.ABC_ID+"&password="+p_record.Data._Password+"&visit="+records[I].Data.Visit;
+                            var q_url=$vm.module_list[m.input.oq].url+u+db+d+p;
+    						window.open(q_url);
+                        });
+                        break;
+                    case '_Login_ID':
+                        td.html(p_record.UID+"-"+p_record.Data.ABC_ID);
+                        break;
+                    case '_Password':
+                        td.html(p_record.Data._Password);
+                        break;
+                }
+            }
+            //-------------------------------------
+            m.cell_process=function(){
+                //cell render
+                //console.log("M:"+JSON.stringify(m))
+                if(m.records.length>0){
+                    console.log("Baseline Date:"+JSON.stringify(m.records[m.records.length-1].Data.Visit_Date))
+                    bl_date=m.records[m.records.length-1].Data.Visit_Date
+                }
+                $('#grid__ID td').each(function(){
+                    var col = $(this).parent().children().index($(this));
+                    var row = $(this).parent().parent().children().index($(this).parent())-1; var I=row;
+                    var column_name=$('#grid__ID th:nth-child('+(col+1)+')').attr('data-header');
+                    //-------------------------
+                    if(column_name=='_Form'){
+                        var data_id=$(this).attr('data-id');
+                        $(this).css({'color':'#666','padding-left':'8px','padding-right':'8px'})
+                        $(this).html("<u style='cursor:pointer'><i class='fa fa-pencil-square-o'></i></u>");
+                        $(this).find('u').on('click',function(){
+                            m.form_I=row;
+                            var prefix=""; if(m.prefix!=undefined) prefix=m.prefix;
+                            if($vm.module_list[prefix+m.form_module]===undefined){
+                                alert('Can not find "'+m.form_module+'" in the module list');
+                                return;
+                            }
+                            $vm.load_module(prefix+m.form_module,$vm.root_layout_content_slot,{record:m.records[I],p_record:p_record,bl_date:bl_date});
+                        })
+                    }
+                    //-------------------------
+                    if(column_name=='_Delete'){
+                        $(this).css({'color':'#666','padding-left':'8px','padding-right':'8px'})
+                        $(this).html("<u style='cursor:pointer'><i class='fa fa-trash-o'></i></u>");
+                        $(this).find('u').data('ID',m.records[row]._id);
+                        $(this).find('u').on('click',function(){
+                            var rid=$(this).data('ID');
+                            if(confirm("Are you sure to delete?\n")){
+                                m.delete(rid);
+                            }
+                        })
+                    }
+                    //-------------------------
+                    if(m.cell_render!==undefined){ m.cell_render(m.records,row,column_name,$(this)); }
+                    //-------------------------
+                    /*
+                    if(column_name=='_Form' || column_name=='_Delete' || column_name=='DateTime' || column_name=='Author' || m.records[row].vm_readonly[column_name]===true){
+                        if($vm.edge==0) $(this).removeAttr('contenteditable');
+                        else if($vm.edge==1) $(this).find('div:first').removeAttr('contenteditable');
+                        $(this).css('background-color','#F8F8F8')
+                    }
+                    if(m.records[row].vm_custom[column_name]===true){
+                        if($vm.edge==0) $(this).removeAttr('contenteditable');
+                        else if($vm.edge==1) $(this).find('div:first').removeAttr('contenteditable');
+                    }
+                    */
+                })
+                //------------------------------------
+            }
+   			//-------------------------------------	
+            //		Delete last record
+   			//-------------------------------------	
+            $('#del__ID').on('click',function(){
+                if(m.records.length>0) {
+                    var P_rid=p_record._id;
+                    var P_table=p_record.Table;
+                    var P_data=p_record.Data;
+                    var P_index={};
+                    if(m.records[0].Data.Visit=="BL") P_index={I2:""};
+                    else if (m.records[0].Data.Visit=="LTFU1") P_index={I2:"BL"};
+                    else{
+                        var vis=(m.records[0].Data.Visit).split('U');
+                        var vis_count=vis[1];
+                        vis_count--;
+                        P_index={I2:"LTFU"+vis_count.toString()};
+                    }
+                    var rid=m.records[0]._id;
+                    //var table=m.records[0].Table;
+                    if(confirm("Are you sure to delete?\n")){
+                        m.delete(rid);
+                        $vm.request({cmd:"update",id:P_rid,table:P_table,data:P_data,index:P_index},function(res){
+                            //-----------------------------
+                            if(res.status=="lk"){
+                                $vm.alert("This record is locked.");
+                                return;
+                            }
+                            //-----------------------------
+                            if(res.status=="np"){
+                                alert("No permission to update this record.");
+                                return;
+                            }
+                        });
+                    }
+                }
+            })            
+   			//-------------------------------------			
+			m.new = function(){
+                console.log(m.records[0].Data.Visit)
+                var last_visit='';
+                if(m.records.length>0){
+                    last_visit=m.records[0].Data.Visit;
+                }
+                if(m.form_module!=undefined){
+                    var prefix=""; if(m.prefix!=undefined) prefix=m.prefix;
+                    $vm.load_module(prefix+m.form_module,'',{goback:1,p_record:p_record,bl_date:bl_date,last_visit:last_visit});
+                    return;
+                }
+            }
+            //-------------------------------------
+            m.export_records=function(){
+                tabledata=m.Table;
+                m.Table=$vm.module_list['participant-data'].Table;
+                var participant_rec={};
+                var req={cmd:"export",table:m.Table,I1:m.I1,search:$('#keyword__ID').val()}
+                open_model__ID();
+                $vm.request(req,function(N,i,txt){
+                    //console.log(i+"/"+N);
+                    $('#msg__ID').text((100*i/N).toFixed(0)+"%");
+                    if(i==-1){
+                        var len=txt.length;
+                        n_txt="["+txt.substring(5,len-9)+"]";
+                        //console.log(n_txt)
+                        participant_rec=JSON.parse(n_txt);
+                        //Order by m.fields
+                        var fields_ex=m.fields.replace("_Participant_ID","ID").replace("Randomisation_Number|I1","Randomisation_Number")
+                        var export_fields=fields_ex.split(',');
+                        //console.log(export_fields);
+                        //console.log(participant_rec);
+                        export_fields=export_fields.slice(1,export_fields.length-3);
+                        var oo=JSON.parse(JSON.stringify(participant_rec,export_fields));
+                        var tmp=JSON.stringify(oo).replace(/\bID\b/g,"Participant ID")
+                        oo=JSON.parse(tmp);
+                        //console.log(JSON.stringify(oo))
+                        $vm.download_csv(m.Table+".csv",oo);
+                        close_model__ID();
+                    }
+                }); 
+            }
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+    </style>
+</div>

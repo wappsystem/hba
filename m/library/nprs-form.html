@@ -1,0 +1,202 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95 mb-3">
+    <div class="row">
+      <!-- form container start -->
+      <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+        <div class="row">
+          <div class="col-12">
+            <!-- form start -->
+            <form id="F__ID">
+              <h3 id=title__ID></h3>
+              <!-- participant part for all tsak forms -------------------->
+              <div id="participant_div__ID">
+                <div class="form-group">
+                  <fieldset class="subquestions">
+                    <label><span class="">Screening Number</span>
+                      <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </label><br>
+                    <label><span class="">Participant ID</span>
+                      <input type=text name="Participant_uid" class=form-control readonly />
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <fieldset class="subquestions">
+                  <h4>This question relates to any physical pain that you may have experienced in the past 2 weeks. This
+                    can include general aches and pains or pain associated with a particular condition e.g. arthritis or
+                    an injury.</h4>
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <h4>1. Please indicate the intensity of your <b>current</b> pain levels on a scale of 0 (no pain) to 10 (worst pain imaginable)</h4>
+                <div class="questiongroup">
+                  <div class=nprs_1__ID style='position:relative;height:111px; left: 0px; top: 0px; width: 400px;'>
+                    <img src='__CURRENT_PATH__/nprs.png' />
+                    <div id=indicator_1__ID>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>2. Over the past 2 weeks, how would you rate
+                  your pain on a good day?<br> <i>For an example, your pain might be 2/10 on a
+                    good day.</i></h4>
+                <div class="questiongroup">
+                  <div class=nprs_2__ID style='position:relative;height:111px; left: 0px; top: 0px; width: 400px;'>
+                    <img src='__CURRENT_PATH__/nprs.png' />
+                    <div id=indicator_2__ID>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>3. Over the past 2 weeks, how would you rate
+                  your pain on a bad day?<br><i>For an example, your pain might be 8/10 on a
+                    bad day.</i></h4>
+                <div class="questiongroup">
+                  <div class=nprs_3__ID style='position:relative;height:111px; left: 0px; top: 0px; width: 400px;'>
+                    <img src='__CURRENT_PATH__/nprs.png' />
+                    <div id=indicator_3__ID>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+              </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function F__ID() {
+    //-------------------------------------
+    VmInclude: __COMPONENT__/f/form.01.js
+    VmInclude: __CURRENT_PATH__/shared-form.js
+    //-------------------------------------
+    var position_1 = "";
+    var position_2 = "";
+    var position_3 = "";
+    var dx;
+    //-------------------------------------
+    var load2 = m.load;
+    m.load = function (){  
+      load2();
+      if(m.input.record==undefined){
+        $('#indicator_1__ID').hide();
+        $('#indicator_2__ID').hide();
+        $('#indicator_3__ID').hide();
+      }
+      else{
+        if (m.input.record.Data.nprs_1 != undefined) {
+          $('#indicator_1__ID').show();
+          position_1 = parseFloat(m.input.record.Data.nprs_1)*10;
+          dx = position_1 / 100 * 344 + 19
+          $('#indicator_1__ID').css('margin-left', dx.toString() + 'px');
+        }
+        //-------------------------------------
+        if (m.input.record.Data.nprs_2 != undefined) {
+          $('#indicator_2__ID').show();
+          position_2 = parseFloat(m.input.record.Data.nprs_2)*10;
+          dx = position_2 / 100 * 344 + 19
+          $('#indicator_2__ID').css('margin-left', dx.toString() + 'px');
+        }
+        //-------------------------------------
+        if (m.input.record.Data.nprs_3 != undefined) {
+          $('#indicator_3__ID').show();
+          position_3 = parseFloat(m.input.record.Data.nprs_3)*10;
+          dx = position_3 / 100 * 344 + 19
+          $('#indicator_3__ID').css('margin-left', dx.toString() + 'px');
+        }
+      }
+      //-------------------------------------
+    }
+    //-------------------------------
+    $('.nprs_1__ID').on('click', function () {
+      $('#indicator_1__ID').show()
+      var x0 = $('.nprs_1__ID').offset().left;
+      var x1 = event.pageX
+      dx = x1 - x0 - 0;
+      console.log(dx)
+      if (dx < 19) dx = 19;
+      if (dx > 363) dx = 363;
+      $('#indicator_1__ID').css('margin-left', dx.toString() + 'px');
+      var pos = ((dx - 19) * 100 / 344).toFixed(0);
+      position_1 = pos;
+      console.log("position: "+pos)
+    })
+    //-------------------------------
+    $('.nprs_2__ID').on('click', function () {
+      $('#indicator_2__ID').show()
+      var x0 = $('.nprs_2__ID').offset().left;
+      var x1 = event.pageX
+      dx = x1 - x0 - 0;
+      console.log(dx)
+      if (dx < 19) dx = 19;
+      if (dx > 363) dx = 363;
+      $('#indicator_2__ID').css('margin-left', dx.toString() + 'px');
+      var pos = ((dx - 19) * 100 / 344).toFixed(0);
+      position_2 = pos;
+      console.log("position: "+pos)
+    })
+    //-------------------------------
+    $('.nprs_3__ID').on('click', function () {
+      $('#indicator_3__ID').show()
+      var x0 = $('.nprs_3__ID').offset().left;
+      var x1 = event.pageX
+      dx = x1 - x0 - 0;
+      console.log(dx)
+      if (dx < 19) dx = 19;
+      if (dx > 363) dx = 363;
+      $('#indicator_3__ID').css('margin-left', dx.toString() + 'px');
+      var pos = ((dx - 19) * 100 / 344).toFixed(0);
+      position_3 = pos;
+      console.log("position: "+pos)
+    })
+    //-------------------------------------
+    var before_submit = m.before_submit;
+    m.before_submit = function (data, index) {
+      if (position_1 == "") {
+        $vm.alert("Please mark the scale 1.");
+        return false;
+      }
+      if (position_2 == "") {
+        $vm.alert("Please mark the scale 2.");
+        return false;
+      }
+      if (position_3 == "") {
+        $vm.alert("Please mark the scale 3.");
+        return false;
+      }
+      data.nprs_1 = (parseFloat(position_1)/10).toFixed(1);
+      data.nprs_2 = (parseFloat(position_2)/10).toFixed(1);
+      data.nprs_3 = (parseFloat(position_3)/10).toFixed(1);
+      return before_submit(data, index);
+    }
+    //-------------------------------------
+
+  }
+      //------------------------------------
+</script>
+<style>
+  #D__ID .mt-95 {
+    max-width:600px!important;
+  }
+
+  #D__ID #indicator_1__ID,#indicator_2__ID,#indicator_3__ID {
+    margin-top: 19px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5px;
+    height: 20px;
+    background-color: red;
+    z-index: 200
+  }
+
+  VmInclude:__CURRENT_PATH__/wappsystem-form.css
+</style>
+</div>

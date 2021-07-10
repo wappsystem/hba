@@ -1,0 +1,145 @@
+<div id=D__ID>
+
+    <!--third html start -->
+    <div class="container mt-95 mb-3 text-left">
+      <div class="row" >
+
+        <!-- form container start -->
+
+        <div class="col mx-auto formbox">
+          <div class="row">
+            <div class="col-12">
+
+              <!-- form start -->
+                <form id=F__ID>
+                    <h3>PATIENT CONSENT FORM</h3>
+                    <!-- form group -->
+                    <!-- participant part for all tsak forms -------------------->
+                    <div id="participant_div__ID">
+                        <div class="form-group">
+                           <fieldset class="subquestions">
+                               <label ><span class="">Screening Number</span>
+                                   <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant"/>
+                               </label><br>
+                               <label ><span class="">Participant ID</span>
+                                   <input type=text name="Participant_uid" class=form-control readonly />
+                               </label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <fieldset class="text-center">
+                            <h4>Light to improve sleep, circadian rhythms, cognition and day time alertness
+                            </h4>
+                        </fieldset>
+                    </div>
+                    <div class="form-group text-left">
+                        <fieldset class="subquestions">
+                            <h4>In giving my consent I state that: 
+                                <ul  style='list-style:initial'>
+                                    <li>I understand the purpose of the study, what I will be asked to do, and any risks/benefits involved. </li>
+                                    <li>I have read the Participant Information Statement and have been able to discuss my involvement in the study with the researchers if I wished to do so.</li>
+                                    <li>The researchers have answered any questions that I had about the study and I am happy with the answers.</li>
+                                    <li>I understand that being in this study is completely voluntary and I do not have to take part. My decision whether to be in the study will not affect my relationship with the researchers or anyone else at the Woolcock Institute of Medical Research or the University of Sydney now or in the future.</li>
+                                    <li>I understand that I can withdraw from the study at any time. </li>
+                                    <li>I understand that personal information about me that is collected over the course of this project will be stored securely and will only be used for purposes that I have agreed to. </li>
+                                    <li>I understand my referring physician may provide a relevant medical history to researchers, including any sleep complaints.</li>
+                                    <li>I understand that if my study results indicate follow up medical care or treatment is required, this will be communicated to me and my referring physician with my consent. </li>
+                                    <li>I understand my data generated from my stay at the Woolcock Institute will be shared with the researchers of this study. </li>
+                                    <li>I understand that information about me will only be told to others with my permission, except as required by law.</li>
+                                    <li>I understand that the results of this study may be published, and that publications will not contain my name or any identifiable information about me. </li>
+                                    <li>You have been fully advised that as part of your sleep study and/or daytime test, full video capture will be recorded and collected. This footage will be used for best analysis of your sleep study and/or daytime test. The footage remains securely part of your sleep study and/or daytime test and copies are not retained on separate data files. CCTV is also in operation throughout the facility in bedrooms, common areas, waiting rooms, corridors, and staff monitoring rooms for patient and staff safety. Bathrooms are NOT monitored. </li>
+                                </ul>
+                            </h4>
+                        </fieldset>
+                    </div>
+                    <div class="form-group text-left">
+                        <fieldset class="">
+                            <h4>I consent to Participating in </h4>
+                            <label class="radiobuttons">
+                              <input type="radio" name="Consent_part" value="Part 1" required >
+                              <span class="checkmark"></span> Part 1 - field-based study</label><br>
+                              <label class="radiobuttons">
+                                <input type="radio" name="Consent_part" value="Part 2">
+                                <span class="checkmark"></span> Part 1 and 2 – field based study and in-lab study</label><br>
+                                <label class="radiobuttons">
+                                    <input type="radio" name="Consent_part" value="No">
+                                    <span class="checkmark"></span> None</label>
+                                </fieldset>
+                    </div>
+                    <div class="form-group text-left">
+                        <fieldset class="subquestions">
+                            <h4>In addition, I agree to provide a buccal (cheek) swab for genetic study</h4>
+                            <label class="radiobuttons">
+                              <input type="radio" name="Consent_buccal" value="Yes" required >
+                              <span class="checkmark"></span> Yes</label>
+                            <label class="radiobuttons">
+                              <input type="radio" name="Consent_buccal" value="No">
+                              <span class="checkmark"></span> No</label>
+                        </fieldset>
+                    </div>
+                    <div class="form-group text-left">
+                        <fieldset class="subquestions">
+                            <h4>I would like to receive feedback about the overall results of this study</h4>
+                            <label class="radiobuttons">
+                              <input type="radio" name="result" value="Yes" required >
+                              <span class="checkmark"></span> Yes</label>
+                            <label class="radiobuttons">
+                              <input type="radio" name="result" value="No">
+                              <span class="checkmark"></span> No</label>
+                        </fieldset>
+                    </div>
+                    <div id=consent_no_text__ID>
+                        <div class="form-group">
+                            <fieldset class="subquestions">
+                                <h4>In order to participate in the study, you will need to select either Part 1 or Part 1 + Part 2. If you have any questions, please feel free to contact Paula on (02) 9114 0495 or at  paula.ordonezartunduaga@sydney.edu.au
+                                    or Teha on (02) 9114 0498 or at tpun9449@uni.sydney.edu.au.
+                                </h4>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div >
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude: __COMPONENT__/f/form.01.js
+            VmInclude: __CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            m.default_load = m.load;
+            m.load = function () {
+                m.default_load();
+                $('#submit__ID').show();
+                $('#consent_no_text__ID').hide();
+                $('#D__ID').scrollTop(0);
+                $(window).scrollTop(0);
+                m.input.goback=1;
+            }
+            //--------------------------------------------------------
+            $("#D__ID input[name=Consent_part]").on('click', function () {
+                console.log($(this).attr('value'))
+                if ($(this).attr('value') != 'No' ) { $('#submit__ID').show(); $('#consent_no_text__ID').hide(); }
+                else { $('#submit__ID').hide(); $('#consent_no_text__ID').show(); }
+            })
+            //--------------------------------------------------------
+            $('#D__ID').css('min-height',$vm.min_height);
+            //--------------------------------------------------------
+            $(this).scrollTop(0);
+        }
+    </script>
+    <style>
+        #D__ID{
+            height:100%;
+            animation: vm_module_fadein 1.0s;
+            overflow: auto;
+        }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

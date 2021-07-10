@@ -1,0 +1,44 @@
+<section>
+    VmInclude:__CURRENT_PATH__/../grid.v1h.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        VmInclude:__COMPONENT__/g/grid.01.js
+        VmInclude:__CURRENT_PATH__/shared-data.js
+        //-------------------------------------
+        m.load=function(){
+            $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+        }
+        //-------------------------------------
+        var fields="Work_check,Incidental_check,Leisure_check,Structured_check,No_activity_check,Work,Incidental,Leisure,Light_aerobic,Heavy_aerobic,Stretching,Strengthening,Low_intensity,High_intensity,Other,Other_Specify,Structured_Exertion,Structured_Enjoyment,Structured_Pain,Structured_Pain_After,Structured_Performance";
+        m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+        //-------------------------------------
+        var cell_render = m.cell_render;
+        m.cell_render=function(records,I,field,td){
+            switch(field){
+                case 'Work_check':
+                case 'Incidental_check':
+                case 'Leisure_check':
+                case 'Structured_check':
+                case 'No_activity_check':
+                case 'Light_aerobic':
+                case 'Heavy_aerobic':
+                case 'Stretching':
+                case 'Strengthening':
+                case 'Low_intensity':
+                case 'High_intensity':
+                case 'Other':
+                if(records[I].Data[field]=="on") td.html("Checked");
+                else td.html("")
+                    break;
+            }
+            return cell_render(records,I,field,td);
+        }
+    //-------------------------------------
+    
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/g/grid.01.css
+</style>

@@ -1,0 +1,161 @@
+<div id=D__ID>
+    <!--third html start -->
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id="F__ID">
+                            <h3 id=title__ID></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="form-group">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Screening Number</span>
+                                            <input type=text name="Participant" class=form-control id=Participant__ID
+                                                data-id="Participant" />
+                                        </label><br>
+                                        <label><span class="">Participant ID</span>
+                                            <input type=text name="Participant_uid" class=form-control readonly />
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <!-- form group -->
+                            <div class="form-group">
+                                <div class="questiongroup ">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Date of Birth</span>
+                                            <input type=date class="form-control" name="DOB" placeholder="" required>
+                                        </label><br>
+                                        <label><span class="">Gender</span>
+                                            <select name="Gender" class=form-control required>
+                                                <option></option>
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </label><br>
+                                        <label><span class="">Height (cm)</span>
+                                            <input class="form-control" type="number"  name="Height" min=140 max=220 required>
+                                        </label><br>
+                                        <label><span class="">Weight (kg)</span>
+                                            <input class="form-control" type="number" name="Weight" min=40 max=250 required>
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Smoking Status</span>
+                                            <select name="Smoking" class=form-control required>
+                                                <option></option>
+                                                <option>Smoker</option>
+                                                <option>Non-smoker</option>
+                                                <option>Ex-smoker</option>
+                                                <option>Currently quitting</option>
+                                            </select>
+                                        </label><br>
+                                        <label><span class="">Highest education received </span>
+                                            <select name="Education" class=form-control required>
+                                                <option></option>
+                                                <option>None</option>
+                                                <option>Primary school</option>
+                                                <option>Secondary school</option>
+                                                <option>Vocational education/training</option>
+                                                <option>Tertiary</option>
+                                            </select>
+                                        </label><br>
+                                        <label><span class="">Employment status </span>
+                                            <select name="Employment" class=form-control required>
+                                                <option></option>
+                                                <option>Full time</option>
+                                                <option>Part-time</option>
+                                                <option>Casual</option>
+                                                <option>Self-employed</option>
+                                                <option>Unemployed</option>
+                                                <option>Student</option>
+                                                <option>Retired</option>
+                                            </select>
+                                        </label><br>
+                                        <label><span class="">Marital status</span>
+                                            <select name="Marital_Status" class=form-control required>
+                                                <option></option>
+                                                <option>Single</option>
+                                                <option>Separated</option>
+                                                <option>Married or de facto</option>
+                                                <option>Divorced</option>
+                                                <option>Widowed</option>
+                                            </select>
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Dependents</span>
+                                            <select name="Dependents" class=form-control required>
+                                                <option></option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select>
+                                        </label><br>
+                                        <label class=pl-4><span class="">If Yes specify number</span>
+                                            <input class="form-control" type="number" name="Dependents_number" >
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="questiongroup">
+                                    <fieldset class="subquestions">
+                                        <label><span class="">Income</span>
+                                            <select name="Income" class=form-control required>
+                                                <option></option>
+                                                <option >Less than $20,000</option>
+                                                <option >$20,000-$50,000</option>
+                                                <option >$50,000-$80,000</option>
+                                                <option >$80,000-$130,000</option>
+                                                <option >More than $130,000</option>
+                                            </select>
+                                        </label><br>
+                                        <label><span class="">17.	Where did you hear about this study?</span>
+                                            <select name="Intensity" class=form-control required>
+                                                <option></option>
+                                                <option>Pharmacy</option>
+                                                <option>Research institute</option>
+                                                <option>Social media (twitter/fb)</option>
+                                                <option>Research website</option>
+                                                <option>Word of mouth</option>
+                                                <option>Referral by HCP</option>
+                                            </select>
+                                        </label><br>
+                                    </fieldset>
+                                </div>
+                            </div>
+                            <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:__CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+        max-width:600px;
+    }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

@@ -1,0 +1,29 @@
+<section>
+  VmInclude:__CURRENT_PATH__/grid.v1h.html
+</section>
+<script>
+  function F__ID(){
+      //-------------------------------------
+      VmInclude:__COMPONENT__/g/grid.01.js
+      VmInclude:__CURRENT_PATH__/shared-data.js
+      //-------------------------------------
+      $('#title__ID').text('Medical History')
+      //-------------------------------------
+      var fields="pregnant,hypertension,hypertension_status,hypercholesterolemia,hypercholesterolemia_status,atherosclerosis,atherosclerosis_status"
+      fields+=",diabetes,diabetes_status,gout,gout_status,cancer,cancer_status,autoimmune_disorder,autoimmune_disorder_status,gastric_reflux,gastric_reflux_status";
+      fields+=",arthritis,arthritis_status,asthma,asthma_status,copd,copd_status,insomnia,insomnia_status,osteoporosis,osteoporosis_status";
+      fields+=",enlarged_prostate,enlarged_prostate_status,depression,depression_status,anxiety,anxiety_status,chronic_pain,chronic_pain_status,cognitive_impairment,cognitive_impairment_status";
+      fields+=",other,other_specify,other_status,prescription,OTC,complementary,supplements,medical_condition,surgery,surgery_specify,sedatives";
+      fields+=",opioids,stimulants,miscellaneous,insomnia_none,insomnia_meditation,insomnia_freq_meditation,insomnia_sleep_hygene,insomnia_freq_sleep_hygene";
+      fields+=",insomnia_otc,insomnia_freq_otc,insomnia_precritption,insomnia_freq_precritption,insomnia_recreational,insomnia_freq_recreational,insomnia_other,insomnia_other_specify,insomnia_freq_other";
+      fields+=",used_cannabis,used_cannabis_specify,dependence_cannabis,dependence_cannabis_specify,recreational_drug,recreational_drug_specify,drug_test,drug_test_specify";
+      fields+=",hypersensitivity,hypersensitivity_specify,osa,osa_specify,medical_conditions,medical_conditions_specify,psychiatric_disorders,psychiatric_disorders_specify";
+      fields+=",liver_abnormalities,liver_abnormalities_specify,fear_needles,fear_needles_specify,difficulties_swallowing,difficulties_swallowing_specify";
+      fields+=",shift_work,shift_work_specify,smoking";
+      m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+      //-------------------------------------
+  }
+</script>
+<style>
+  VmInclude:__COMPONENT__/g/grid.01.css
+</style>

@@ -1,0 +1,19 @@
+<section>
+  VmInclude:__CURRENT_PATH__/grid.v1h.html
+</section>
+<script>
+  function F__ID(){
+      //-------------------------------------
+      VmInclude:__COMPONENT__/g/grid.01.js
+      VmInclude:__CURRENT_PATH__/shared-data.js
+      //-------------------------------------
+      $('#title__ID').text('Short Form Survey Instrument (SF-36)');
+      //-------------------------------------
+      var fields="WHOQOL_1,WHOQOL_2,WHOQOL_3,WHOQOL_4,WHOQOL_5,WHOQOL_6,WHOQOL_7,WHOQOL_8,WHOQOL_9,WHOQOL_10,WHOQOL_11,WHOQOL_12,WHOQOL_13,WHOQOL_14,WHOQOL_15,WHOQOL_16,WHOQOL_17,WHOQOL_18,WHOQOL_19,WHOQOL_20,WHOQOL_21,WHOQOL_22,WHOQOL_23,WHOQOL_24,WHOQOL_25,WHOQOL_26,WHOQOL_Domain1_Raw,WHOQOL_Domain1_4_20,WHOQOL_Domain1_100,WHOQOL_Domain2_Raw,WHOQOL_Domain2_4_20,WHOQOL_Domain2_100,WHOQOL_Domain3_Raw,WHOQOL_Domain3_4_20,WHOQOL_Domain3_100,WHOQOL_Domain4_Raw,WHOQOL_Domain4_4_20,WHOQOL_Domain4_100";
+      m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+      //-------------------------------------
+  }
+</script>
+<style>
+  VmInclude:__COMPONENT__/g/grid.01.css
+</style>

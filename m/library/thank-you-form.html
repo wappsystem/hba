@@ -1,0 +1,65 @@
+<div id=D__ID>
+	<div id=page__ID>
+		<div class='panel__ID text-center'>
+			<h1 id=title__ID></h1>
+		</div>
+	</div>
+	<style>
+		#D__ID{
+			height:100%;
+	        overflow:auto;
+			animation: vm_module_fadein 1.0s, D__ID 3s;
+	        padding-bottom:10%;
+		}
+		#page__ID{
+			margin: auto;
+  			width: 60%;
+  			padding: 10px;
+			text-align: -webkit-center;		
+		}
+		#page__ID h1 {
+			font-size: 3rem;
+			color: rgba(255, 255, 255, 0.8);
+			/*line-height: 1.2;
+			font-weight: 400;
+			text-transform: uppercase;
+			text-align: center !important;
+			margin-top: 20px;*/
+			font-family: "Roboto Slab", Arial, sans-serif;
+		}
+		.panel__ID{
+			color:#fff;
+			font-weight: normal;
+			background-color: rgba(75, 75, 75, 0.9);
+			padding: 20px;
+			border-radius: 15px;
+		}
+		@keyframes D__ID {
+			from {padding-top: 300px;}
+			to {padding-top: 0px;}
+		}
+	    @media screen and (max-width: 600px) {
+			#page__ID{
+				margin: auto;
+				padding: 10px;
+				width: 100%;
+				text-align: -webkit-center;		
+			}
+			#page__ID h1 {
+				font-size: 1rem;
+				color: rgba(255, 255, 255, 0.8);
+				/*line-height: 1.2;
+				font-weight: 400;
+				text-transform: uppercase;
+				text-align: center !important;
+				margin-top: 20px;*/
+				font-family: "Roboto Slab", Arial, sans-serif;
+			}
+		}
+	</style>
+	<script>
+		function F__ID(){
+      $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+		}
+	</script>
+</div>

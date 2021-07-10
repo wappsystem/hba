@@ -1,0 +1,129 @@
+<div id=D__ID>
+	<div class="container mt-95 mb-3">
+		<div class="row">
+			<!-- form container start -->
+			<div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+				<div class="row">
+					<div class="col-12">
+						<!-- form start -->
+						<form id=F__ID>
+							<h3>Participant's Details</h3>
+							<div class='row px-4'>
+								<div class="col-sm-12 col-lg-4 ">
+									<label class=''><span class=''>ABC ID</span>
+										<input type=text class=form-control name=ABC_ID >
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-4 row_participant__ID">
+									<label class=''><span class=''>Participant ID</span>
+										<input type=text class=form-control id=record__ID readonly>
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-4 row_participant__ID">
+									<label class=''><span class=''>Password</span>
+										<input type=text class=form-control name=_Password>
+									</label>
+								</div>
+							</div>
+							<div class='row px-4'>
+								<div class="col-sm-12 col-lg-12 ">
+									<label class='' style="width: 100%;"><span class=''>notes on ABC_ID duplicates</span>
+										<textarea  class=form-control name=ABC_ID_notes  ></textarea>
+									</label>
+								</div>
+							</div>
+							<div class='row px-4'>
+								<div class="col-sm-12 col-lg-4 ">
+									<label class=''><span class=''>Bio ID code</span>
+										<input type=text  class=form-control name=BIO_ID  >
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-4 ">
+									<label class=''><span class=''>COPS ID number</span>
+										<input type=text class=form-control name=COPS_ID >
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-4 ">
+									<label class=''><span class=''>firstname surname</span>
+										<input type=text class=form-control name=initials >
+									</label>
+								</div>
+							</div>
+							<div class='row px-4'>
+								<div class="col-sm-12 col-lg-4 ">
+									<label class=''><span class=''>HBA identification number</span>
+										<input type=text class=form-control name=HBA_ID >
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-4 ">
+									<label class=''><span class=''>BA ID</span>
+										<input type=text  class=form-control name=BA_ID  >
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-4 ">
+									<label class=''><span class=''>CPAP ID</span>
+										<input type=text class=form-control name=CPAP_ID >
+									</label>
+								</div>
+							</div>
+							<div class='row px-4'>
+								<div class="col-sm-12 col-lg-6 ">
+									<label class=''><span class=''>From PD study (Control participants enrolled via PD clinic)</span>
+										<input type=text class=form-control name=PD_code >
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-6 ">
+									<label class=''><span class=''>Which study was participant primarily / initially enrolled in</span>
+										<input type=text class=form-control name=Study_Primary >
+									</label>
+								</div>
+							</div>
+							<div class='row px-4'>
+								<div class="col-sm-12 col-lg-12 ">
+									<label class='' style="width: 100%;"><span class=''>Notes relating to data entry for this participant in general</span>
+										<textarea  class=form-control name=Notes_General  ></textarea>
+									</label>
+								</div>
+							</div>
+							<div class='row px-4'>
+								<div class="col-sm-12 col-lg-6">
+								</div>
+							</div>
+							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function F__ID() {
+			//-------------------------------------
+			VmInclude: __COMPONENT__/f/form.01.js
+			//-------------------------------------
+			var load = m.load;
+			m.load = function () {
+				load();
+				if (m.input.record == undefined) {
+					$('.row_participant__ID').hide()
+					$('#F__ID input[name=_Password').val($vm.vm_password(8, false));
+				}
+				else {
+					$('.row_participant__ID').show()
+					$('#record__ID').val(m.input.record.UID)
+				}
+			}
+			//-------------------------------------			
+			m.before_submit = function (data, index) {
+			}
+			//-------------------------------------
+		}
+	</script>
+	<style>
+		#D__ID .mt-95 {
+			max-width: 800px;
+		}
+
+		VmInclude:__CURRENT_PATH__/../../library/wappsystem-form.css
+	</style>
+</div>

@@ -1,0 +1,30 @@
+<section>
+    VmInclude:__CURRENT_PATH__/grid.v1h.html
+</section>
+  <script>
+      function F__ID(){
+          //-------------------------------------
+          VmInclude:__COMPONENT__/g/grid.01.js
+          VmInclude:__CURRENT_PATH__/shared-data.js
+        //-------------------------------------
+        $('#title__ID').text('Actiwatch Extraction');
+          //-------------------------------------
+          var fields="File_Name,File_Name2,Serial_No,Recording_Date,Recording_Time,Artifacts_Duration,Desat_Event,Time_Desat_Event,ODI,Pulse_Event,Time_Pulse_Event,Pulse_Index,Desat_Below_88,SaO2_Min,SaO2_Max";
+          m.fields="_Form,_Lock,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+          //-------------------------------------
+          var cell_render=m.cell_render;
+            m.cell_render=function(records,I,field,td){
+                cell_render(records,I,field,td);
+                switch(field){
+                    case 'File_Name':
+                    case 'File_Name2':
+                        m.set_file_link(records,I,field,td)
+                        break;
+                }
+            }
+            //-------------------------------------
+      }
+  </script>
+  <style>
+      VmInclude:__COMPONENT__/g/grid.01.css
+  </style>

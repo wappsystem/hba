@@ -1,0 +1,496 @@
+<div id=D__ID>
+    <div class="container mt-95 mb-3">
+        <div class="row">
+            <!-- form container start -->
+            <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- form start -->
+                        <form id=F__ID>
+                            <h3 id=title__ID></h3>
+                            <!-- participant part for all tsak forms -------------------->
+                            <div id="participant_div__ID">
+                                <div class="row px-4">
+                                    <div class="col-sm-12 col-lg-3 ">
+                                        <span class=label__ID>Participant Identifier</span><br>
+                                        <input type=text name="Participant" class=form-control id=Participant__ID
+                                            data-id="Participant" />
+                                    </div>
+                                    <div class="col-sm-12 col-lg-3">
+                                        <span class=label__ID>Participant ID</span><br>
+                                        <input type=text name="Participant_uid" class=form-control readonly />
+                                    </div>
+                                    <div class="col-sm-12 col-lg-3">
+                                        <span class=label__ID>Visit</span><br>
+                                        <input type=text name="Visit" class=form-control readonly />
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <!-- Form Inputs-------------------------------------->
+                            <div class="row px-4">
+                                <div class='col'>
+                                    <span>File Upload</span>
+                                    <div class="form-control">
+                                        <u style='cursor:pointer' id=link_File_Name__ID></u>
+                                        <input type="file" name=File_Name style="margin-top:6px" class='btn btn-primary btn-lg' /><br />
+                                        <br />
+                                        <button id=x_File_Name__ID type="button" class='btn btn-primary btn-lg' onClick="this.form.reset()">Remove</button>
+                                        <button id='submit__ID' type='submit' class='btn btn-primary btn-lg'>Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <!-- Variable Inputs---------------------------------->
+                            <div class='row px-4'><div class='col'><label><span>C3_Spindle Comments</span> <input type=text class=form-control name=C3_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Threshold</span> <input type=text class=form-control name=C3_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=C3_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=C3_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=C3_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=C3_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=C3_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=C3_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=C3_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=C3_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=C3_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=C3_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=C3_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=C3_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=C3_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=C3_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=C3_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=C3_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=C3_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=C3_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=C3_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=C3_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=C3_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=C3_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=C3_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=C3_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=C3_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=C3_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=C3_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=C3_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=C3_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=C3_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=C3_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=C3_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C3_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=C3_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Spindle Comments</span> <input type=text class=form-control name=C4_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Threshold</span> <input type=text class=form-control name=C4_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=C4_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=C4_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=C4_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=C4_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=C4_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=C4_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=C4_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=C4_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=C4_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=C4_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=C4_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=C4_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=C4_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=C4_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=C4_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=C4_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=C4_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=C4_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=C4_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=C4_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=C4_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=C4_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=C4_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=C4_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=C4_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=C4_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=C4_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=C4_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=C4_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=C4_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=C4_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=C4_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>C4_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=C4_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Spindle Comments</span> <input type=text class=form-control name=Cz_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Threshold</span> <input type=text class=form-control name=Cz_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=Cz_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=Cz_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Cz_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Cz_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Cz_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=Cz_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=Cz_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=Cz_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=Cz_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=Cz_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=Cz_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=Cz_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=Cz_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Cz_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Cz_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Cz_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=Cz_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=Cz_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=Cz_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=Cz_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=Cz_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=Cz_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=Cz_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=Cz_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Cz_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Cz_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Cz_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=Cz_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=Cz_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=Cz_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=Cz_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=Cz_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Cz_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=Cz_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Spindle Comments</span> <input type=text class=form-control name=F3_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Threshold</span> <input type=text class=form-control name=F3_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=F3_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=F3_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=F3_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=F3_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=F3_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=F3_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=F3_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=F3_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=F3_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=F3_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=F3_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=F3_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=F3_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=F3_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=F3_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=F3_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=F3_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=F3_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=F3_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=F3_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=F3_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=F3_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=F3_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=F3_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=F3_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=F3_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=F3_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=F3_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=F3_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=F3_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=F3_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=F3_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F3_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=F3_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Spindle Comments</span> <input type=text class=form-control name=F4_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Threshold</span> <input type=text class=form-control name=F4_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=F4_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=F4_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=F4_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=F4_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=F4_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=F4_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=F4_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=F4_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=F4_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=F4_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=F4_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=F4_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=F4_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=F4_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=F4_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=F4_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=F4_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=F4_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=F4_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=F4_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=F4_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=F4_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=F4_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=F4_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=F4_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=F4_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=F4_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=F4_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=F4_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=F4_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=F4_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=F4_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>F4_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=F4_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Spindle Comments</span> <input type=text class=form-control name=Fz_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Threshold</span> <input type=text class=form-control name=Fz_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=Fz_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=Fz_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Fz_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Fz_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Fz_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=Fz_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=Fz_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=Fz_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=Fz_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=Fz_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=Fz_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=Fz_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=Fz_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Fz_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Fz_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Fz_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=Fz_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=Fz_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=Fz_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=Fz_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=Fz_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=Fz_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=Fz_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=Fz_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Fz_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Fz_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Fz_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=Fz_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=Fz_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=Fz_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=Fz_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=Fz_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Fz_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=Fz_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Spindle Comments</span> <input type=text class=form-control name=O1_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Threshold</span> <input type=text class=form-control name=O1_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=O1_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=O1_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=O1_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=O1_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=O1_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=O1_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=O1_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=O1_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=O1_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=O1_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=O1_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=O1_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=O1_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=O1_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=O1_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=O1_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=O1_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=O1_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=O1_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=O1_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=O1_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=O1_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=O1_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=O1_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=O1_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=O1_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=O1_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=O1_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=O1_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=O1_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=O1_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=O1_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O1_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=O1_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Spindle Comments</span> <input type=text class=form-control name=O2_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Threshold</span> <input type=text class=form-control name=O2_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=O2_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=O2_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=O2_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=O2_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=O2_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=O2_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=O2_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=O2_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=O2_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=O2_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=O2_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=O2_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=O2_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=O2_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=O2_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=O2_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=O2_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=O2_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=O2_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=O2_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=O2_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=O2_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=O2_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=O2_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=O2_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=O2_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=O2_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=O2_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=O2_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=O2_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=O2_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=O2_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>O2_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=O2_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Spindle Comments</span> <input type=text class=form-control name=Oz_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Threshold</span> <input type=text class=form-control name=Oz_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=Oz_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=Oz_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Oz_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Oz_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Oz_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=Oz_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=Oz_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=Oz_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=Oz_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=Oz_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=Oz_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=Oz_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=Oz_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Oz_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Oz_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Oz_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=Oz_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=Oz_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=Oz_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=Oz_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=Oz_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=Oz_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=Oz_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=Oz_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Oz_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Oz_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Oz_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=Oz_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=Oz_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=Oz_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=Oz_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=Oz_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Oz_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=Oz_SWS_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Spindle Comments</span> <input type=text class=form-control name=Pz_Spindle_Comments></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Threshold</span> <input type=text class=form-control name=Pz_Threshold></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during NREM (Stages2+3+4)</span> <input type=text class=form-control name=Pz_NREM_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Overall spindle density in NREM, per minute of time in bed</span> <input type=text class=form-control name=Pz_NREM_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Overall (11-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Pz_NREM_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Fast (13-16 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Pz_NREM_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Slow (11-13 Hz) spindle density, per minute of NREM sleep</span> <input type=text class=form-control name=Pz_NREM_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Sum of all individual spindle event durations during NREM (seconds)</span> <input type=text class=form-control name=Pz_NREM_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Duration of Spindle Events during NREM (seconds)</span> <input type=text class=form-control name=Pz_NREM_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Frequency of Spindle Events during NREM (Hz)</span> <input type=text class=form-control name=Pz_NREM_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Maximum Amplitude of Spindle Events during NREM (µV)</span> <input type=text class=form-control name=Pz_NREM_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average skewedness of the spindle waxing and waning shape during NREM</span> <input type=text class=form-control name=Pz_NREM_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Mean height in microvolts relative to the duration in seconds during NREM</span> <input type=text class=form-control name=Pz_NREM_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during N2</span> <input type=text class=form-control name=Pz_S2_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Overall spindle density in N2, per minute of time in bed</span> <input type=text class=form-control name=Pz_S2_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Overall (11-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Pz_S2_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Fast (13-16 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Pz_S2_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Slow (11-13 Hz) spindle density, per minute of N2 sleep</span> <input type=text class=form-control name=Pz_S2_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Sum of all individual spindle event durations during N2 (seconds)</span> <input type=text class=form-control name=Pz_S2_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Duration of Spindle Events during N2 (seconds)</span> <input type=text class=form-control name=Pz_S2_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Frequency of Spindle Events during N2 (Hz)</span> <input type=text class=form-control name=Pz_S2_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Maximum Amplitude of Spindle Events during N2 (µV)</span> <input type=text class=form-control name=Pz_S2_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average skewedness of the spindle waxing and waning shape during N2</span> <input type=text class=form-control name=Pz_S2_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Mean height in microvolts relative to the duration in seconds during N2</span> <input type=text class=form-control name=Pz_S2_MeanHD></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Total Number of Overall (average frequency within 11-16 Hz) Spindles Events during Slow wave sleep</span> <input type=text class=form-control name=Pz_SWS_Occurrence></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Overall spindle density in Slow wave sleep, per minute of time in bed</span> <input type=text class=form-control name=Pz_SWS_SplTIB_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Overall (11-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Pz_SWS_Spl_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Fast (13-16 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Pz_SWS_Spl_fast_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Slow (11-13 Hz) spindle density, per minute of Slow wave sleep sleep</span> <input type=text class=form-control name=Pz_SWS_Spl_slow_pmin></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Sum of all individual spindle event durations during Slow wave sleep (seconds)</span> <input type=text class=form-control name=Pz_SWS_TotalTime></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Duration of Spindle Events during Slow wave sleep (seconds)</span> <input type=text class=form-control name=Pz_SWS_MeanDuration></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Frequency of Spindle Events during Slow wave sleep (Hz)</span> <input type=text class=form-control name=Pz_SWS_MeanFreq></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average Maximum Amplitude of Spindle Events during Slow wave sleep (µV)</span> <input type=text class=form-control name=Pz_SWS_MeanMaxHeight></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Average skewedness of the spindle waxing and waning shape during Slow wave sleep</span> <input type=text class=form-control name=Pz_SWS_MeanSymm></label> </div></div>
+                            <div class='row px-4'><div class='col'><label><span>Pz_Mean height in microvolts relative to the duration in seconds during Slow wave sleep</span> <input type=text class=form-control name=Pz_SWS_MeanHD></label> </div></div>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            VmInclude: '__COMPONENT__/f/form.01.js'
+            VmInclude: '__CURRENT_PATH__/shared-form.js'
+            //-------------------------------------
+            $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name);
+            $('#F__ID input[name=File_Name]').on('change', function (evt) {
+                if (this.files.length == 1) {
+                    file_process(this.files[0])
+                }
+            });
+            //-------------------------------------
+
+            function parseVariableName(str) {
+                if (str == undefined) {
+                    return
+                }
+                str = str.replace(/[^\w\s]/gi, ''); // String may not contain special characters
+                str = str.trim(); // Trim any <space> characters from start or end of string
+                str = str.replace(/^\d+\s*/, ''); // String cannot start with numbers
+                str = str.split(' ').join('_'); // Join any remaining bits of string with underscores
+                return str;
+            }
+
+            //-------------------------------------
+            // File reader function
+            var file_process = function (file) {
+                // Create a new file reader and on loading a file -> run
+                var reader = new FileReader();
+                reader.onload = (function (e) {
+
+                    ///////////////////////////////////////////////////////////////////////////////
+                    // MANUAL EDIT REQUIRED HERE 
+                    // Specify whether the variabels are listed as rows (false) or as columns (true)
+                    // Specify the delimiter
+                    var columnWise = false;
+                    var delimiter = '=';
+
+                    // Get contents
+                    var contents = e.target.result;
+                    // Split the contents into rows based on the new-line character '\n'
+                    var rows = contents.replace(/"/g, '').replace(/\r/, '\n').replace(/\n\n/, '\n').split('\n');
+
+                    // Extract the data
+                    if (columnWise) { // Column-wise
+                        for (var r = 0; r < rows.length; r++) {
+                            // The first row contains all variable names
+                            if (r == 0) {
+                                var varNames = rows[r].split(delimiter);
+                                // Replace any <space> or other special character
+                                for (v = 0; v < varNames.length; v++) {
+                                    varNames[v] = parseVariableName(varNames[v]);
+                                }
+                            } else {
+                                // The subsequent rows contains the values
+                                var varValues = rows[r].split(delimiter);
+                            }
+                        }
+                    } else { // Row-wise
+                        // Initialize the varNames and varValue arrays
+                        var varNames = Array();
+                        var varValues = Array();
+                        // For each row, extract the variable name and value, and store in the form-input field.
+                        for (var r = 0; r < rows.length; r++) {
+                            // Split the variable name and value pair based on the delimiter
+                            var row = rows[r].split(delimiter);
+                            // If it did not find a pair, continue
+                            if (row.length == 1) {
+                                continue
+                            };
+                            varNames.push(parseVariableName(row[0]));
+                            varValues.push(row[1]);
+                        }
+                    }
+                    // Store the value of each variable in the form-input field
+                    for (var v = 0; v < varNames.length; v++) {
+                        console.log(varNames[v] + ': ' + varValues[v])
+                        $('#F__ID input[name="' + varNames[v] + '"]').val(varValues[v]);
+                    }
+                });
+                reader.readAsText(file);
+            }
+            var old_load = m.load;
+            m.load = function () {
+                old_load();
+                m.set_file_link("File_Name");
+            }
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width: 800px;
+        }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

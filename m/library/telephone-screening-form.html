@@ -1,0 +1,139 @@
+<div id=D__ID>
+  <!--third html start -->
+  <div class="container mt-95 mb-3">
+    <div class="row">
+      <!-- form container start -->
+      <div class="col-12 col-lg-12 col-md-11 col-sm-12 mx-auto formbox">
+        <div class="row">
+          <div class="col-12">
+            <!-- form start -->
+            <form id="F__ID">
+              <h3>Telephone Screening</h3>
+              <!-- participant part for all tsak forms -------------------->
+              <div id="participant_div__ID">
+                <div class="form-group">
+                  <fieldset class="subquestions">
+                    <label><span class="">Screening Number</span>
+                      <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                    </label><br>
+                    <label><span class="">Participant ID</span>
+                      <input type=text name="Participant_uid" class=form-control readonly />
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>Date</h4>
+                <div class="questiongroup ">
+                  <fieldset class="subquestions">
+                    <label><span class="">Date</span>
+                      <input type="date" name="date" class=form-control />
+                    </label>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>Do you require a personal carer for your basic self-care tasks?</h4>
+                <div class="questiongroup ">
+                  <fieldset class="subquestions">
+                    <label class="radiobuttons">
+                      <input type="radio" name="personal_care" value="Yes">
+                      <span class="checkmark"></span>Yes</label><br>
+                    <label class="radiobuttons">
+                      <input type="radio" name="personal_care" value="No">
+                      <span class="checkmark"></span>No</label><br>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>Have you seen a sleep physician in the past?</h4>
+                <div class="questiongroup ">
+                  <fieldset class="subquestions">
+                    <label class="radiobuttons">
+                      <input type="radio" name="sleep_physician" value="Yes">
+                      <span class="checkmark"></span>Yes</label><br>
+                    <label class="radiobuttons">
+                      <input type="radio" name="sleep_physician" value="No">
+                      <span class="checkmark"></span>No</label><br>
+                  </fieldset>
+                  <fieldset class="">
+                    <label><span class="">If yes, was there any diagnosis or treatment given?</span></label><br>
+                    <textarea class="form-control" name="sleep_physician_describe"></textarea>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>Do you have any photosensitivity to light?</h4>
+                <div class="questiongroup ">
+                  <fieldset class="subquestions">
+                    <label class="radiobuttons">
+                      <input type="radio" name="photosensitivity" value="Yes">
+                      <span class="checkmark"></span>Yes</label><br>
+                    <label class="radiobuttons">
+                      <input type="radio" name="photosensitivity" value="No">
+                      <span class="checkmark"></span>No</label><br>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>Are you aware that as part of the study you will be required to stay in a laboratory suite for 3 days without natural lights, and are you comfortable with this?</h4>
+                <div class="questiongroup ">
+                  <fieldset class="subquestions">
+                    <label class="radiobuttons">
+                      <input type="radio" name="stay" value="Yes">
+                      <span class="checkmark"></span>Yes</label><br>
+                    <label class="radiobuttons">
+                      <input type="radio" name="stay" value="No">
+                      <span class="checkmark"></span>No</label><br>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>Have you been diagnosed with any medical conditions that may affect your ability to stay in a sleep laboratory for 3 consecutive days and nights?</h4>
+                <div class="questiongroup ">
+                  <fieldset class="subquestions">
+                    <label class="radiobuttons">
+                      <input type="radio" name="medical_condition" value="Yes">
+                      <span class="checkmark"></span>Yes</label><br>
+                    <label class="radiobuttons">
+                      <input type="radio" name="medical_condition" value="No">
+                      <span class="checkmark"></span>No</label><br>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="form-group">
+                <h4>Are you able to commit to keeping your screening and laboratory visit appointments over the next 6-8 weeks?</h4>
+                <div class="questiongroup ">
+                  <fieldset class="subquestions">
+                    <label class="radiobuttons">
+                      <input type="radio" name="committed" value="Yes">
+                      <span class="checkmark"></span>Yes</label><br>
+                    <label class="radiobuttons">
+                      <input type="radio" name="committed" value="No">
+                      <span class="checkmark"></span>No</label><br>
+                  </fieldset>
+                </div>
+              </div>
+
+              <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function F__ID() {
+      //-------------------------------------
+      VmInclude:__COMPONENT__/f/form.01.js
+      VmInclude:__CURRENT_PATH__/shared-form.js
+      //-------------------------------------
+      }
+  </script>
+  <style>
+      #D__ID .mt-95 {
+      max-width:600px;
+      }
+      VmInclude:__CURRENT_PATH__/wappsystem-form.css
+  </style>
+</div>

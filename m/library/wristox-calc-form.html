@@ -1,0 +1,299 @@
+<div id=D__ID>
+    <div class="container mt-95 mb-3">
+      <div class="row" >
+        <!-- form container start -->
+        <div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+          <div class="row">
+            <div class="col-12">
+              <!-- form start -->
+              <form id="F__ID">
+                 <h3 id=title__ID></h3>
+                 <div class="row px-4">
+                     <div class='col'>
+                         <label ><span class="">Extraction of data from WristOx.</span>
+                        </label>
+                     </div>
+                 </div>
+                 <hr>
+                 <!-- participant part for all tsak forms -------------------->
+                 <div id="participant_div__ID">
+                     <div class="row px-4">
+                         <div class="col-sm-12 col-lg-9 ">
+                             <span class=label__ID>Screening Number</span><br>
+                             <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" />
+                         </div>
+                         <div class="col-sm-12 col-lg-3">
+                             <span class=label__ID>Participant ID</span><br>
+                             <input type=text name="Participant_uid" class=form-control readonly />
+                         </div>
+                     </div>
+                     <hr>
+                 </div>
+                 <!-- form group -->
+                 <div class="row px-4">
+                     <div class='col'>
+    					<span>File</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_File_Name__ID></u>
+                            <br>
+                            <input type="file" name=File_Name style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=x_File_Name__ID>Remove</button>
+                        </div>
+                     </div>
+                 </div>
+                 <hr>
+                 <div class='row px-4'>
+                     <div class="col-sm-12 col-lg-6">
+                         <label class=''><span class='' >Serial Number</span>
+                             <input class="form-control" type="text" name="Serial_No" />
+                         </label>
+                     </div>
+                 </div>
+                 <hr>
+                 <div class='row px-4'>
+                    <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Recording Date</span>
+                            <input class="form-control" type="text" name="Recording_Date" />
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Recording Time</span>
+                            <input class="form-control" type="text" name="Recording_Time" />
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Artifacts Duration</span>
+                            <input class="form-control" type="text" name="Artifacts_Duration" />
+                        </label>
+                    </div>
+                </div>
+                <hr>
+                <div class='row px-4'>
+                     <div class="col-sm-12 col-lg-4">
+                         <label class=''><span class='' >Desaturation Event:</span>
+                             <input class="form-control" type="text" name="Desat_Event" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Time in Desat Events (min)</span>
+                            <input class="form-control" type="text" name="Time_Desat_Event" />
+                        </label>
+                    </div>
+                    <div class="col-sm-12 col-lg-4">
+                         <label class=''><span class='' >ODI (Desat Event per Hour)</span>
+                             <input class="form-control" type="text" name="ODI" />
+                         </label>
+                     </div>
+                </div>
+                 <hr>
+                 <div class='row px-4'>
+                     <div class="col-sm-12 col-lg-4">
+                         <label class=''><span class='' >Pulse Event</span>
+                             <input class="form-control" type="text" name="Pulse_Event" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-4">
+                         <label class=''><span class='' >Time in Pulse Event (min)</span>
+                             <input class="form-control" type="text" name="Time_Pulse_Event" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-4">
+                        <label class=''><span class='' >Pulse Event per Hour</span>
+                            <input class="form-control" type="text" name="Pulse_Index" />
+                        </label>
+                    </div>
+                </div>
+                 <hr>
+                 <div class='row px-4'>
+                    <div class="col-sm-12 col-lg-6">
+                        <label class=''><span class='' >Time (min) where oxygen saturation is below 88</span>
+                             <input class="form-control" type="text" name="Desat_Below_88" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-3">
+                        <label class=''><span class='' >Minimum SpO2</span>
+                             <input class="form-control" type="text" name="SaO2_Min" />
+                         </label>
+                     </div>
+                     <div class="col-sm-12 col-lg-3">
+                        <label class=''><span class='' >Maximum SpO2</span>
+                             <input class="form-control" type="text" name="SaO2_Max" />
+                         </label>
+                     </div>
+                 </div>
+                 <hr>
+                 <button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+              </form>
+            </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        //---------------------------------------------
+        function F__ID(){
+            //-------------------------------------
+			VmInclude:'__COMPONENT__/f/form.01.js'
+            VmInclude:__CURRENT_PATH__/shared-form.js
+            //-------------------------------------
+            //SpO2 values were obtained by averaging the preceding 5 seconds. 
+            //A desaturation event was defined as at least a 4% drop from baseline SpO2 for at least 10 seconds.
+            var mean_duration=5;  //Mean calculated over 120 seconds
+            var drop_sao2_duration=10;   //Sao2 drop needs to be below limit for 10 secs
+            var drop_hr_duration=8;   //hr drop needs to be below limit for 8 secs
+            var sao2_drop=3;        //SaO2 drop is 3%  
+            var hr_drop=6;          //Heart rate drop is 6 beats  
+            //-------------------------------------
+            var load2=m.load;
+            m.load=function(){
+                load2();
+                if(m.input.readonly!=undefined) $('#submit__ID').hide();
+                //render_file_field_v2(m.input.record,'__ID',$('#File_Name__ID'));
+                m.set_file_link("File_Name");
+            }
+            //-------------------------------------
+            $('#F__ID input[name=File_Name]').on('change',function(evt){
+                if(this.files.length==1){
+                    file_process(this.files[0])
+                }
+            })
+            //-------------------------------------
+            var file_process=function(file){
+                var reader = new FileReader();
+                reader.onload = (function(e) {
+                    var contents = e.target.result;
+                    var lines=contents.replace(/"/g,'').replace(/\r/,'\n').replace(/\n\n/,'\n').split('\n');
+                    var writoxserno=[];
+                    var writoxtime=[];
+                    var writoxhr=[];
+                    var writoxsao2=[];
+                    var data_start=0;
+                    if(lines.length>0){
+                        for(var i=0;i<lines.length;i++){
+                            var line=lines[i].split(',');
+                            if(line.length==9){
+                                writoxserno.push(line[0]);
+                                var wdate=new Date(line[1],line[2],line[3],line[4],line[5],line[6])
+                                writoxtime.push(wdate);
+                                writoxhr.push(line[7]);
+                                writoxsao2.push(line[8]);
+                            }
+                        }
+                        var sampletime=(Date.parse(writoxtime[1])-Date.parse(writoxtime[0]))/1000
+                        $('input[name="Serial_No"]').val(writoxserno[0]);
+                        var rec=$vm.date_to_yyyymmdd(writoxtime[0]);
+                        rec=$vm.yyyymmdd_to_ddmmyyyy(rec);
+                        $('input[name="Recording_Date"]').val(rec);
+                        var rec_time=(Date.parse(writoxtime[writoxtime.length-1])-Date.parse(writoxtime[0]))/1000;
+                        $('input[name="Recording_Time"]').val(seconds_to_hhmmss(rec_time));
+                        var artifacts=0;
+                        for(var j=0;j<writoxserno.length;j++){
+                            if(writoxsao2[j]==500){
+                                artifacts++;
+                            }
+                        }
+                        $('input[name="Artifacts_Duration"]').val(seconds_to_hhmmss(artifacts));
+
+                        var max_sao2=-100;
+                        var min_sao2=500;
+                        var mean_sao2_buff=0;
+                        var mean_sao2=[];
+                        var sao2event=0;
+                        var sao2eventdur=0;
+                        var sao2_88=0;
+                        var totalsao2eventdur=0;
+                        var mean_hr_buff=0;
+                        var mean_hr=[];
+                        var hrevent=0;
+                        var hreventdur=0;
+                        var totalhreventdur=0;
+                        for(var j=0;j<writoxserno.length;j++){
+                            if(writoxsao2[j] != 500){
+                                // SaO2 events
+                                if(mean_sao2_buff < mean_duration/sampletime){
+                                    mean_sao2.push(writoxsao2[j]);
+                                    mean_sao2_buff++;
+                                }
+                                else{
+                                    var msao2=0;
+                                    for(var k=0;k<mean_sao2_buff;k++){
+                                        msao2+=parseInt(mean_sao2[k]);
+                                        //if(mean_sao2[k]>msao2) msao2=(mean_sao2[k]);
+                                    }
+                                    msao2=msao2/mean_sao2_buff;
+                                    //console.log(j+' |'+msao2+' | '+writoxsao2[j]+' | '+sao2event+ ' | '+mean_sao2[0]+ ' | '+mean_sao2[1]+ ' | '+mean_sao2[2]+ ' | '+mean_sao2[3]+ ' | '+mean_sao2[4])
+                                    if(writoxsao2[j] <= (msao2-sao2_drop)){
+                                        sao2eventdur++;
+                                    }
+                                    else if (sao2eventdur/sampletime>drop_sao2_duration){
+                                        //console.log(j)
+                                        sao2event++;
+                                        totalsao2eventdur+=sao2eventdur;
+                                        sao2eventdur=0;
+                                    }
+                                    if(writoxsao2[j]>writoxsao2[j-1]){
+                                        //console.log(j)
+                                        mean_sao2.shift();
+                                        mean_sao2.push(writoxsao2[j]);
+                                    }
+                                }
+                                // HR events
+                                if(mean_hr_buff < mean_duration/sampletime){
+                                    mean_hr.push(writoxhr[j]);
+                                    mean_hr_buff++;
+                                }
+                                else{
+                                    var mhr=0;
+                                    for(var k=0;k<mean_hr_buff;k++){
+                                        mhr+=parseInt(mean_hr[k]);
+                                    }
+                                    mhr=mhr/mean_hr_buff;
+                                    if(writoxhr[j] < (mhr-hr_drop)){
+                                        hreventdur++;
+                                    }
+                                    else if (hreventdur/sampletime>drop_hr_duration){
+                                        hrevent++;
+                                        totalhreventdur+=hreventdur;
+                                        hreventdur=0;
+                                    }
+                                    mean_hr.shift();
+                                    mean_hr.push(writoxhr[j]);
+                                }
+                                if(parseInt(writoxsao2[j])>max_sao2) max_sao2=parseInt(writoxsao2[j]);
+                                if(parseInt(writoxsao2[j])<min_sao2) min_sao2=parseInt(writoxsao2[j]);
+                                if(parseInt(writoxsao2[j])<88) sao2_88++
+                            }
+                        }
+                        $('input[name="Desat_Event"]').val(sao2event);
+                        $('input[name="Time_Desat_Event"]').val((totalsao2eventdur*sampletime/60).toFixed(1));
+                        $('input[name="Pulse_Event"]').val(hrevent);
+                        $('input[name="Time_Pulse_Event"]').val((totalhreventdur*sampletime/60).toFixed(1));
+                        $('input[name="SaO2_Max"]').val((max_sao2).toString());
+                        $('input[name="SaO2_Min"]').val((min_sao2).toString());
+                        $('input[name="Desat_Below_88"]').val((sao2_88*sampletime/60).toFixed(1));
+                        $('input[name="ODI"]').val((sao2event/(rec_time-artifacts)*sampletime*3600).toFixed(1));
+                        $('input[name="Pulse_Index"]').val((hrevent/(rec_time-artifacts)*sampletime*3600).toFixed(1));
+                    }
+                });
+                reader.readAsText(file);
+            }
+            //-------------------------------------
+            var seconds_to_hhmmss=function(seconds){
+                var hour=Math.floor(seconds/3600);
+                seconds=(seconds%3600);
+                var min=Math.floor(seconds/60);
+                var sec=(seconds%60);
+                if(min<10) min='0'+min.toString(); else min=min.toString();
+                if(sec<10) min='0'+sec.toString(); else sec=sec.toString();
+                return hour+':'+min+':'+sec;
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #D__ID .mt-95 {
+            max-width:800px;
+        }
+        VmInclude:__CURRENT_PATH__/wappsystem-form.css
+    </style>
+</div>

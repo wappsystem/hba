@@ -1,0 +1,106 @@
+<div id=D__ID>
+	<div class="container mt-95 mb-3">
+		<div class="row">
+			<!-- form container start -->
+			<div class="col-12 col-lg-12 col-md-12 col-sm-12 mx-auto formbox">
+				<div class="row">
+					<div class="col-12">
+						<!-- form start -->
+						<form id=F__ID>
+							<h3>Visit details</h3>
+							<div class='row px-4'>
+								<div class="col-sm-12 col-lg-4 ">
+									<label class=''><span class=''>Visit</span>
+										<input type=text class=form-control name=Visit id=visit__ID readonly >
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-4">
+									<label class=''><span class=''>Visit Date</span>
+										<input type=date class=form-control name=Visit_Date id=Visit_Date__ID required>
+									</label>
+								</div>
+								<div class="col-sm-12 col-lg-4">
+									<label class=''><span class=''>Days since Baseline</span>
+										<input type=text class=form-control name=Days_Baseline id=Days_Baseline__ID readonly>
+									</label>
+								</div>
+							</div>
+							<button type="submit" id="submit__ID" class="btn btn-primary btn-lg">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		function F__ID() {
+			//-------------------------------------
+			VmInclude: __COMPONENT__/f/form.01.js
+			//-------------------------------------
+            var new_record=false;
+			//-------------------------------------
+			var load = m.load;
+			m.load = function () {
+				load();
+                console.log(m.input)
+				if (m.input.record == undefined) {
+					new_record=true;
+                    if(m.input.last_visit==undefined || m.input.last_visit==''){
+                        $('#visit__ID').val("BL");
+                        $('#Days_Baseline__ID').val("0")
+                    }
+                    else{
+                        var visit=(m.input.last_visit).split('U');
+                        if (visit.length!=2){
+                            $('#visit__ID').val("LTFU1")
+                        }
+                        else{
+                            var v_num=parseInt(visit[1]);
+                            v_num++;
+                            $('#visit__ID').val("LTFU"+v_num.toString())
+                        }
+                    }
+				}
+				else {
+					new_record=false;
+				}
+			}
+			//-------------------------------------			
+			$('#Visit_Date__ID').on('change',function(){
+                console.log($('#Visit_Date__ID').val())
+                console.log(m.input.bl_date)
+                var diffTime = Math.abs(Date.parse($('#Visit_Date__ID').val()) - Date.parse(m.input.bl_date));
+                var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+                $('#Days_Baseline__ID').val(diffDays);
+            })
+			//-------------------------------------			
+			m.before_submit = function (data, index) {
+                if(new_record){
+                    var P_rid=m.input.p_record._id;
+                    var P_table=m.input.p_record.Table;
+                    var P_data=m.input.p_record.Data;
+                    m.input.p_record.I2=$('#visit__ID').val();
+                    $vm.request({cmd:"update",id:P_rid,table:P_table,data:P_data,index:{I2:$('#visit__ID').val()}},function(res){
+                    //-----------------------------
+                        if(res.status=="lk"){
+                            $vm.alert("This record is locked.");
+                            return;
+                        }
+                        //-----------------------------
+                        if(res.status=="np"){
+                            alert("No permission to update this record.");
+                            return;
+                        }
+                    });
+                }
+			}
+		}
+	</script>
+	<style>
+		#D__ID .mt-95 {
+			max-width: 800px;
+		}
+
+		VmInclude:__CURRENT_PATH__/../../library/wappsystem-form.css
+	</style>
+</div>
