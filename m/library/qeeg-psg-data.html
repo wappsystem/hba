@@ -10,8 +10,8 @@
             //-------------------------------------
             $('#title__ID').text($vm.module_list[$vm.vm['__ID'].name].task_name); //$('#title__ID').text('PSG300 Extraction');
             //-------------------------------------
-            var fields="File_Name,sleep_study,sleep_study_date,sleep_clinic_date_match,Comments,PSG_System,TIB_min,TST_min,SOL_min,ROL_min,WASO_min,SE_percent,REM_min,S1_min,S2_min,S3_min,S4_min,NREM_min,SWS_min,REM_percent,S1_percent,S2_percent,S3_percent,S4_percent,NREM_percent,SWS_percent";
-            m.fields="_Form,_Status,_Notes,_Participant_ID,Screening Number|Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+            var fields="File_Name,sleep_study,Study_Date,sleep_clinic_date_match,Comments,PSG_System,Time_in_Bed_min,Total_Sleep_Time_min,Sleep_Onset_Time,REM_Latency_min,Wake_After_Sleep_Onset_min,Sleep_Efficiency_Percent_TIB,REM_min,S1_min,S2_min,S3_min,S4_min,NREM_min,SWS_min,REM_Percent_TST,S1_percent,S2_percent,S3_percent,S4_percent,NREM_Percent_TST,SWS_percent";
+            m.fields="_Form,_Status,_Notes,_Participant_ID,Screening Number|Participant,Visit,"+fields+",Submit_date,Submitted_by,_Delete";
             //-------------------------------------
             var cell_render=m.cell_render;
             m.cell_render=function(records,I,field,td){

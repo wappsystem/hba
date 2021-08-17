@@ -2,14 +2,7 @@
     var modules={
         "panel-main":    			{url:"$H/m/panel-main.html",router:1},
         "panel-child":    			{url:"$H/m/panel-child.html"},
-        "panel-export-screening":   {url:"$H/m/panel-export-screening.html",router:1},
-        "panel-export-baseline":    {url:"$H/m/panel-export-baseline.html",router:1},
-        "panel-export-week2":    {url:"$H/m/panel-export-week2.html",router:1},
-        "panel-export-week4":    {url:"$H/m/panel-export-week4.html",router:1},
-        "panel-export-week6":    {url:"$H/m/panel-export-week6.html",router:1},
-        "panel-export-week8":    {url:"$H/m/panel-export-week8.html",router:1},
-        "panel-export-week10":    {url:"$H/m/panel-export-week10.html",router:1},
-        "panel-export-exit":    {url:"$H/m/panel-export-exit.html",router:1},
+        "panel-export":   {url:"$H/m/panel-export.html",router:1},
         "export-data-hba": {url:"$H/m/export-data.html",Table:"hba-export",form_module:"export-form-hba"},
         "export-form-hba": {url:"$H/m/export-form.html",Table:"hba-export"},
         
